@@ -1,0 +1,299 @@
+/* our product container */
+.featured-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-center {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.featured-box {
+    min-width: auto;
+    height: 511px;
+    display: flex;
+    gap: 30px;
+    margin: 20px 0px 20px;
+}
+
+
+/* banner left side */
+.featured-left-box {
+    flex-grow: 1;
+    border-radius: 4px;
+    background: url(/src/assets/feature-banner-left.png);
+    background-color: black;
+    background-size: 89% 94%;
+    background-repeat: no-repeat;
+    background-position: 69% 33px;
+    color: #ffffff;
+    position: relative;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+
+}
+
+.featured-left-centent {
+    position: absolute;
+    bottom: 20px;
+    padding: 0px 0px 10px 40px;
+
+}
+
+.featured-left-centent h1 {
+    font-size: 26px;
+    padding: 10px 0px;
+    letter-spacing: 3%;
+
+}
+
+.featured-left-centent p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #FAFAFA;
+    font-weight: 300;
+    padding: 0px 0px 10px;
+
+}
+
+.featured-left-centent button {
+    font-size: 14px;
+    color: #FAFAFA;
+    font-weight: 400;
+    padding: 7px 0px;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+    border: none;
+
+}
+
+.featured-left-centent .feature-nav-link {
+    text-decoration: none;
+    color: #FAFAFA;
+    border-bottom: 1px solid white;
+    padding: 0px 0px 1px;
+}
+
+
+/* banner right side */
+.featured-right-box {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 4px;
+
+}
+
+/* banner right side top  */
+.right-box-top {
+    max-width: auto;
+    height: 240.5px;
+    border-radius: 4px;
+    background: url(/src/assets/feature-banner-right-top.png);
+    background-color: #0D0D0D;
+    background-repeat: no-repeat;
+    background-size: 79% 100%;
+    background-position: 101% 100%;
+    position: relative;
+    font-family: "Inter", sans-serif;
+    color: #FAFAFA;
+}
+
+.right-box-top-content {
+    position: absolute;
+    bottom: 20px;
+    padding: 0px 0px 0px 20px;
+
+}
+
+.right-box-top-content h1 {
+    font-size: 26px;
+    padding: 10px 0px;
+    letter-spacing: 3%;
+
+}
+
+.right-box-top-content p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #FAFAFA;
+    font-weight: 300;
+    padding: 0px 0px 10px;
+
+}
+
+.right-box-top-content button {
+    font-size: 14px;
+    color: #FAFAFA;
+    font-weight: 400;
+    padding: 7px 0px;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+    border: none;
+
+}
+
+.right-box-top-content .feature-nav-link {
+    text-decoration: none;
+    color: #FAFAFA;
+    border-bottom: 1px solid white;
+    padding: 0px 0px 1px;
+}
+
+
+
+
+/* banner rigth side bottom */
+.right-box-bottom {
+    display: flex;
+    height: 240.5px;
+    gap: 30px;
+
+}
+
+
+/* rigth side bottom left box */
+.right-box-bottom-left {
+    flex-grow: 1;
+    border-radius: 4px;
+    background: url(/src/assets/feature-banner-right-bottom1.png);
+    background-color: #323232;
+    background-size: 70% 83%;
+    background-repeat: no-repeat;
+    background-position: 52% 20px;
+    color: #ffffff;
+    position: relative;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+}
+
+.bottom-left-content {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+
+}
+
+.bottom-left-content h1 {
+    font-size: 26px;
+    padding: 8px 0px;
+    letter-spacing: 3%;
+
+}
+
+.bottom-left-content p {
+    font-size: 12px;
+    color: #FAFAFA;
+    font-weight: 300;
+    padding: 0px 0px 2px;
+
+}
+
+.bottom-left-content button {
+    font-size: 14px;
+    color: #FAFAFA;
+    font-weight: 400;
+    padding: 7px 0px;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+    border: none;
+
+}
+
+.bottom-left-content .feature-nav-link {
+    text-decoration: none;
+    color: #FAFAFA;
+    border-bottom: 1px solid white;
+    padding: 0px 0px 1px;
+}
+
+
+/* bottom right box */
+.right-box-bottom-right {
+    flex-grow: 1;
+    border-radius: 4px;
+    background: url(/src/assets/feature-banner-right-bottom\ 2.png);
+    background-color: #323232;
+    background-size: 70% 83%;
+    background-repeat: no-repeat;
+    background-position: 52% 20px;
+    color: #ffffff;
+    position: relative;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+}
+
+.bottom-right-content {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+
+}
+
+.bottom-right-content h1 {
+    font-size: 26px;
+    padding: 8px 0px;
+    letter-spacing: 3%;
+
+}
+
+.bottom-right-content p {
+    font-size: 12px;
+    color: #FAFAFA;
+    font-weight: 300;
+    padding: 0px 0px 2px;
+
+}
+
+.bottom-right-content button {
+    font-size: 14px;
+    color: #FAFAFA;
+    font-weight: 400;
+    padding: 7px 0px;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+    border: none;
+
+}
+
+.bottom-right-content .feature-nav-link {
+    text-decoration: none;
+    color: #FAFAFA;
+    border-bottom: 1px solid white;
+    padding: 0px 0px 1px;
+}
+
+
+
+/* addictional-Infomation */
+
+.addictional-informatioin {
+    min-width: auto;
+    min-height: auto;
+    font-family: "Inter", sans-serif;
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 95px;
+}
+
+.addictional-informatioin img {
+    min-width: auto;
+    min-height: auto;
+}
+
+.addictional-informatioin h2 {
+    font-size: 18px;
+    padding: 20px 5px 0px;
+
+}
+.addictional-informatioin p{
+    font-size: 14px;
+    padding: 10px 5px 10px;
+
+}

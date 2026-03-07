@@ -1,0 +1,322 @@
+cart button
+.second-img-box button {
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #000000;
+    border: none;
+    outline: none;
+    border-radius: 0px 0px 3px 3px;
+}
+
+.second-cart-button {
+    font-family: "Inter", sans-serif;
+    background-color: #000000;
+    border-radius: 0px 0px 3px 3px;
+    width: 140px;
+    height: 19px;
+    position: absolute;
+    transform: translateY(-19px);
+    display: flex;
+    align-items: center;
+}
+
+
+@media(min-width:400px) {
+    .second-container {
+        margin-top: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .second-center {
+        width: 90%;
+        height: 400px;
+
+    }
+
+    .second-header {
+        width: 100%;
+        height: 60px;
+        display: flex;
+    }
+
+    /*title h3 and h1 */
+
+    .second-title {
+        display: flex;
+        width: 225px;
+        height: 100%;
+        gap: 40px;
+    }
+
+    .second-title-box {
+        width: 125px;
+        position: relative;
+    }
+
+    .second-title h3 {
+        color: #DB4444;
+        padding: 0px 0px 10px 0px;
+        font-size: 12px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    .second-title h3 span {
+        background-color: #DB4444;
+        padding: 2px 6px;
+        margin-right: 8px;
+        border-radius: 2px;
+    }
+
+    .second-title h1 {
+        font-size: 20px;
+        font-family: "Inter", sans-serif;
+        position: absolute;
+        bottom: 0%;
+    }
+
+
+    /* days and date and hours */
+    .second-date-display {
+        background-color: burlywood;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .second-days {
+        position: absolute;
+        padding: 30px 0px 0px;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 4px;
+    }
+
+    .second-days h5 {
+        font-size: 8px;
+        font-weight: 500;
+        font-family: "Inter", sans-serif;
+    }
+
+    .second-days h5 span {
+        font-size: 16px;
+        padding-top: 10px;
+    }
+
+    .second-days p {
+        color: #DB4444;
+        width: 4px;
+        padding: 5px 0px 0px;
+    }
+
+
+    /*slide button */
+    .second-slide {
+        width: 100%;
+        height: 100%;
+        gap: 20px;
+
+    }
+
+    .second-slide button {
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+        font-size: 2px;
+        border-radius: 50%;
+        border: none;
+        background-color: #F5F5F5;
+        float: right;
+        bottom: 0%;
+        transform: translateY(29px);
+    }
+
+    /*slide boxs*/
+
+
+    .second-slider {
+        width: 100%;
+        height: 195px;
+        margin-top: 20px;
+
+    }
+
+    .second-slides {
+        display: flex;
+        gap: 20px;
+        overflow: scroll;
+    }
+
+
+    .second-slides::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* process one */
+    .second-slide-box {
+        width: 160px;
+        height: 200px;
+
+    }
+
+    /* process img outter box  and img*/
+    .second-img-box {
+        width: 140px;
+        height: 120px;
+        border-radius: 3px;
+        gap: 5px;
+        background-color: #F5F5F5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .second-img-box img {
+
+        width: 80px;
+        height: 60px;
+
+    }
+
+    /* add to cart button */
+    .second-cart-Navbutton {
+        font-size: 10px;
+        background-color: #000000;
+        text-decoration: none;
+        display: flex;
+        margin-top: 3px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    /* attach to img box offer show like button */
+    .second-offer-box {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        font-family: "Inter", sans-serif;
+        top: 5%;
+        gap: 60px;
+    }
+
+    .second-offer-show {
+        font-size: 10px;
+        left: 0;
+        color: #F5F5F5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 22px;
+        background: #DB4444;
+        border-radius: 4px;
+    }
+
+    .second-like-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .second-like-button button {
+        font-size: 0px;
+        border: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #FFFFFF;
+    }
+
+    /* process box content */
+    .second-slide-content {
+        margin-top: 15px;
+        width: 125px;
+        height: 60px;
+        font-family: "Inter", sans-serif;
+        background-color: azure;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .second-slide-content h2 {
+        padding: 2px 0px 0px;
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+    .second-slide-content p {
+        font-size: 10px;
+        color: #DB4444;
+        font-weight: 500;
+        padding: 8px 0px 2.6px 0px;
+    }
+
+    .second-slide-content p span {
+        color: #7F7F7F;
+        text-decoration: line-through;
+    }
+
+    .second-star {
+        font-size: 10px;
+        display: flex;
+    }
+
+    .second-star span {
+        color: #7F7F7F;
+        font-size: 11px;
+        font-weight: 600;
+        text-align: center;
+        align-items: center;
+        padding: 3px 3px 10px 10px;
+    }
+
+
+    /* get all product button*/
+    .second-all-product {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 15px 0px 0px;
+    }
+
+    .second-all-product button {
+        background-color: #DB4444;
+        padding: 5px 17px;
+        border-radius: 3px;
+        outline: none;
+        border: none;
+        text-decoration: none;
+    }
+
+    .second-product-navbtn {
+        font-size: 9px;
+        font-weight: 500;
+        text-decoration: none;
+        color: #F5F5F5;
+    }
+
+    .second-all-product hr {
+        width: 100%;
+        border-bottom: 0px solid #B3B3B3;
+    }
+
+
+
+
+
+
+
+}

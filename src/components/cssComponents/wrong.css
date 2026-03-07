@@ -1,0 +1,101 @@
+/* banner container */
+.banner-container {
+    transform: translateY(100px);
+    width: 100%;
+}
+
+/* banner box */
+.banner-box {
+    width: 100%;
+    height: 350px;
+    background-color: aquamarine;
+    display: flex;
+
+}
+
+/*banner container*/
+.banner-content {
+    width: 50%;
+    height: 100%;
+    background-color: red;
+    padding: 50px 40px;
+    font-family: "Inter", sans-serif;
+}
+
+
+.banner-content .sub-title {
+    font-size: 16px;
+    color: #47B486;
+}
+
+.banner-content .description {
+    font-size: 48px;
+    letter-spacing: 4%;
+    font-weight: 600;
+    padding: 20px 0px 20px 0px;
+
+    color: #FAFAFA;
+    ;
+}
+
+
+/* date and time container */
+.time-dates-container {
+
+    display: flex;
+    gap: 20px;
+
+}
+
+.date-time-box {
+    width: 50px;
+    height: 50px;
+    background-color: #FAFAFA;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* time number */
+.time-number {
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+/* time content */
+.time-content {
+    font-size: 8px;
+    font-weight: 500;
+
+}
+
+.banner-content button {
+    font-size: 12px;
+    font-weight: 600;
+
+}
+
+
+/*banner image*/
+.banner-image {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(0, 94, 255);
+}
+
+.banner-content button {
+
+    font-size: 12px;
+    font-weight: 600;
+    padding: 16px 48px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    background-color: #00FF66;
+    color: #FAFAFA;
+    transform: translateY(30px);
+
+}
