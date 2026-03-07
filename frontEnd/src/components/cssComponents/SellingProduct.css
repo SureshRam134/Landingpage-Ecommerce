@@ -1,0 +1,11 @@
+/* selling product container */
+.selling-product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selling-product-center {
+    width: 80%;
+
+}
