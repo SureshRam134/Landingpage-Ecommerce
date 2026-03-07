@@ -11,6 +11,7 @@ const ProductBox = ({ productDetails, titleName1, scrollRef}) => {
         setActive(inx)
     }
 
+    
 
     return (
         <>
