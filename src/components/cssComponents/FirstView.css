@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     transition: all 2s ease-in;
-    transform: translateY(57.7px);
+    margin: 58px 0px;
 }
 
 
@@ -16,10 +16,15 @@
 
 /* lg screen */
 .first-view-items {
-    width: 217px;
-    height: 344px;
-    transform: translateY(40px);
+    flex-grow: 1;
+    height: auto;
+    gap: 15px;
+    height: auto;
 
+}
+
+.nav-items-split {
+    display: flex;
 }
 
 .first-view-items ul {
@@ -81,16 +86,22 @@
 
 }
 
-.first-view-center p {
+.first-view-items p {
     border-right: 1px solid #B3B3B3;
     height: 344px;
 }
 
 /* slide */
+.first-view-slider {
+    flex-grow: 3;
+}
+
+.first-view-slides {
+    display: flex;
+
+}
 
 .first-view-slide {
-    display: flex;
-    overflow-x: scroll;
     width: 892px;
     height: 305px;
     background-color: #000000;
@@ -102,26 +113,22 @@
     display: none;
 }
 
-/* .first-scroller-gap {} */
-
-
-/* inside split */
-.first-view-slides {
-    display: flex;
-    overflow-x: scroll;
-}
 
 .first-view-slide {
     width: 100%;
     height: 305px;
-    
+
+}
+
+/* inside split */
+.first-view-splits {
+    display: flex;
 }
 
 /* content */
 
 .first-view-content {
-    width: 396px;
-    height: 284px;
+    flex-grow: 1;
     color: #FAFAFA;
     font-family: "Inter", sans-serif;
     font-style: normal;
@@ -209,7 +216,7 @@
 
 /* img  */
 .first-view-img {
-    width: 496px;
+    flex-grow: 2;
     margin-top: 20px;
     height: 264px;
 
