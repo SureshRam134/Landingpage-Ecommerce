@@ -62,6 +62,38 @@ const TodayProduct = () => {
             star: "⭐⭐⭐⭐⭐",
             comments: 65,
         },
+        {
+            image: Table,
+            title: "Small Bookself",
+            price: 360,
+            lessPrice: 20,
+            star: "⭐⭐⭐⭐⭐",
+            comments: 65,
+        },
+        {
+            image: Table,
+            title: "Small Bookself",
+            price: 360,
+            lessPrice: 20,
+            star: "⭐⭐⭐⭐⭐",
+            comments: 65,
+        },
+        {
+            image: Table,
+            title: "Small Bookself",
+            price: 360,
+            lessPrice: 20,
+            star: "⭐⭐⭐⭐⭐",
+            comments: 65,
+        },
+        {
+            image: Table,
+            title: "Small Bookself",
+            price: 360,
+            lessPrice: 20,
+            star: "⭐⭐⭐⭐⭐",
+            comments: 65,
+        },
 
     ])
     return (

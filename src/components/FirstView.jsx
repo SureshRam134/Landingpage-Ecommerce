@@ -25,7 +25,7 @@ const FirstView = () => {
 
 
     // slide arr in object
-    const groupBtn = [] 
+    const groupBtn = []
     const slide = [
         {
             title: "iphone 14 Series",
@@ -86,39 +86,42 @@ const FirstView = () => {
                     </button>
                 </div>
                 <p></p>
-                <div className="first-view-slide">
-                    {
-                        slide.map((item, index) => (
-                            <div className='first-scroller-gap'>
-                                <div className='first-view-splits'>
-                                    <div key={index} className='first-view-content'>
-                                        <div className='first-view-text1'>
-                                            <img src={item.subImg1} alt="Apple img" />
-                                            <h1>{item.title}</h1>
-                                        </div>
-                                        <div className='first-view-text2'>
-                                            <h3>{item.VoucherPersentage}</h3>
-                                            <h3>{item.Voucher}</h3>
-                                        </div>
-                                        <div className='first-view-text3'>
-                                            <button>{item.shopBtn}</button>
-                                            <img src={item.subImg2} alt="Arrow Right" />
-                                        </div>
-                                        <div className='first-view-group-btn'>
-                                            {groupBtn.map((item, index) => <img key={index} src={item} alt="slide Button" />)}
+                {/* slider*/}
+                <div className='first-view-slider'>
+                    <div className="first-view-slides">
+                        {
+                            slide.map((item, index) => (
+                                <div className='first-view-slide'>
+                                    <div className='first-view-splits'>
+                                        <div key={index} className='first-view-content'>
+                                            <div className='first-view-text1'>
+                                                <img src={item.subImg1} alt="Apple img" />
+                                                <h1>{item.title}</h1>
+                                            </div>
+                                            <div className='first-view-text2'>
+                                                <h3>{item.VoucherPersentage}</h3>
+                                                <h3>{item.Voucher}</h3>
+                                            </div>
+                                            <div className='first-view-text3'>
+                                                <button>{item.shopBtn}</button>
+                                                <img src={item.subImg2} alt="Arrow Right" />
+                                            </div>
+                                            <div className='first-view-group-btn'>
+                                                {groupBtn.map((item, index) => <img key={index} src={item} alt="slide Button" />)}
+                                            </div>
+
                                         </div>
 
-                                    </div>
-
-                                    <div className='first-view-img'>
-                                        <img src={item.img} alt="Mobile Img" />
+                                        <div className='first-view-img'>
+                                            <img src={item.img} alt="Mobile Img" />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))
-                    }
+                            ))
+                        }
 
 
+                    </div>
                 </div>
 
             </div>

@@ -10,10 +10,12 @@
     scroll-behavior: smooth;
 }
 
+.scroll-product::-webkit-scrollbar {
+    display: none;
+}
 
 .product-box-controler2 {
     width: 100%;
-    height: 330px;
     display: flex;
     gap: 35px;
 }
@@ -23,7 +25,6 @@
     width: 278px;
     height: 100%;
     cursor: pointer;
-    transition: all 0.2s ease-in;
 }
 
 
@@ -91,6 +92,7 @@
 }
 
 .product-bottom-content-box h4 {
+    width: 278px;
     font-weight: 16px;
     font-weight: 500;
     padding: 7px 0px 0px;
@@ -191,7 +193,6 @@
 
 .product-box-controler1 {
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
     height: 330px;
     gap: 20px;

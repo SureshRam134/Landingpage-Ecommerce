@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useCallback, useRef, useState } from "react"
 import './cssComponents/OurProduct.css'
 import ProductBox from "./ProductBox"
 import Subnavbar from "./Subnavbar"
@@ -71,6 +71,17 @@ const OurProduct = () => {
         },
     ])
 
+    const scrollRef = useRef(null)
+    const leftSlide = useCallback(() => {
+        alert("yuiiu")
+        scrollRef.current.scrollLeft -= 330
+
+    }, [scrollRef])
+
+    const rightSlide = useCallback(() => {
+        alert("yuiiu")
+        scrollRef.current.scrollLeft += 330
+    }, [scrollRef])
     return (
         <>
             <div className="our-product-container">
@@ -79,7 +90,7 @@ const OurProduct = () => {
                     <Subnavbar titleName={titleName} />
 
                     {/* our products */}
-                    <ProductBox productDetails={productDetails} titleName1="Our Products" newProduct="New product" />
+                    <ProductBox productDetails={productDetails} titleName1="Our Products" newProduct="New product" leftSlide={leftSlide} rightSlide={rightSlide} />
                     <div className="product-view-button">
                         <button>View All Products</button>
                     </div>

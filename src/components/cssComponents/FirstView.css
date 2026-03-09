@@ -106,8 +106,15 @@
 
 
 /* inside split */
-.first-view-splits {
+.first-view-slides {
     display: flex;
+    overflow-x: scroll;
+}
+
+.first-view-slide {
+    width: 100%;
+    height: 305px;
+    
 }
 
 /* content */

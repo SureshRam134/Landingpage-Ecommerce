@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './cssComponents/ProductBox.css'
 
 
-const ProductBox = ({ productDetails, titleName1, scrollRef}) => {
+const ProductBox = ({ productDetails, titleName1, scrollRef }) => {
 
     // active state use show (add to cart) button 
     const [active, setActive] = useState(null)
@@ -11,14 +11,14 @@ const ProductBox = ({ productDetails, titleName1, scrollRef}) => {
         setActive(inx)
     }
 
-    
+
 
     return (
         <>
             {/* product box container */}
             <div className='product-container'>
-                <div className='scroll-product'>
-                    <div ref={scrollRef} className={titleName1 === "Our Products" ? 'product-box-controler1' : 'product-box-controler2'} >
+                <div ref={scrollRef} className='scroll-product'>
+                    <div className={titleName1 === "Our Products" ? 'product-box-controler1' : 'product-box-controler2'} >
                         {/* main product box create multi box using map methods */}
                         {
                             productDetails.map((item, index) => (
