@@ -1,32 +1,21 @@
+#root{
+    padding-top:50px ;
+}
+
 .navbar-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    transition: all 2s ease-out;
-    transform: translateY(40px);
+    border-bottom: 0.5px solid #B3B3B3;
+    padding: 5px 0px 20px 0px;
+    background-color: #ffffff;
 }
 
-.navbar-container p {
-    display: block;
-    position: absolute;
-    top: 55px;
-    border-bottom: 1px solid #B3B3B3;
-    width: 100%;
 
-}
-
-.navbar-center {
-    min-width: 80%;
-    /* 88-48 */
-    height: 38px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar-center h1 {
+.navbar-container h1 {
     font-size: 24px;
     font-weight: bold;
+    font-family: "Inter", sans-serif;
     font-family: "Inter", sans-serif;
 }
 
@@ -51,7 +40,6 @@
 
 
 /* nav others */
-
 .navbar-other-source {
     display: flex;
     justify-content: center;
@@ -106,112 +94,5 @@
 
 
 
-/* mobile responsive */
-
-/* lg */
-@media(max-width:1024px) {
-
-    .navbar-container {
-        transform: translateY(35px);
-        transition: all 2s ease-out;
-    }
-
-    .navbar-center {
-        min-width: 90%;
-    }
-
-    .navbar-center h1 {
-        font-size: 24px;
-    }
-
-    .navbar-items ul {
-        gap: 35px;
-    }
-
-    .navbar-search-inputs {
-        width: 200px;
-    }
-}
-
-/* tap */
-@media(max-width:768px) {
-
-    .navbar-container {
-        transform: translateY(30px);
-        transition: all 2s ease-out;
-    }
-
-    .navbar-center {
-        min-width: 90%;
-    }
-
-    .navbar-center h1 {
-        font-size: 20px;
-    }
-
-    .navbar-search-inputs {
-        width: 195px;
-    }
-
-    .navbar-items {
-        display: none;
-    }
-}
 
 
-
-/* mobile */
-@media(max-width:568px) {
-
-    .navbar-container {
-        transform: translateY(20px);
-        transition: all 2s ease-out;
-    }
-
-    .navbar-center {
-        min-width: 90%;
-    }
-
-    .navbar-center h1 {
-        font-size: 18px;
-    }
-
-    .navbar-other-source {
-        gap: 5px;
-    }
-
-    .navbar-search-inputs {
-        width: 160px;
-        gap: 10px;
-
-    }
-
-    .navbar-search-inputs input {
-        width: 90px;
-
-    }
-
-    .navbar-search-inputs button {
-        width: 20px;
-        height: 20px;
-    }
-
-    .navbar-btn {
-        gap: 15px;
-    }
-
-    .navbar-btn {
-        width: 70px;
-        height: 32px;
-        margin-top: -10px;
-    }
-
-    .navbar-btn button {
-        width: 20px;
-        height: 20px;
-    }
-
-    .navbar-items {
-        display: none;
-    }
-}

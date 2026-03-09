@@ -69,28 +69,28 @@ const Category = () => {
     }, [refSlider])
 
     return (
-        <div className="category-container">
-            <div className="category-center">
-                {/* title container */}
-                <Subnavbar titleName={titleName} leftSlide={leftSlide} rightSlide={rightSlide} />
-                <div className="category-slider" ref={refSlider}>
-                    <div className="category-slides">
-                        {
-                            category.map((item, index) => (
-                                // slider content
-                                <div key={index} className="category-slide">
-                                    <div className='category-box-content'>
-                                        <img src={item.image} alt="" />
-                                        <h3>{item.title}</h3>
-                                    </div>
-                                </div>
-                            ))
-                        }
-                    </div>
-                </div>
+        <div className="category-container container">
 
-                <hr className='hr-line' />
+            {/* title container */}
+            <Subnavbar titleName={titleName} leftSlide={leftSlide} rightSlide={rightSlide} />
+            <div className="category-slider" ref={refSlider}>
+                <div className="category-slides">
+                    {
+                        category.map((item, index) => (
+                            // slider content
+                            <div key={index} className="category-slide">
+                                <div className='category-box-content'>
+                                    <img src={item.image} alt="" />
+                                    <h3>{item.title}</h3>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
+
+            <hr className='hr-line' />
+
         </div>
 
     )

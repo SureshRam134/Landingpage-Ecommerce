@@ -1,14 +1,8 @@
 /* our product container */
 .featured-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 4% 6% 4%;
 }
 
-.featured-center {
-    width: 80%;
-    margin: 0 auto;
-}
 
 .featured-box {
     min-width: auto;

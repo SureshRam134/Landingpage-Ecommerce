@@ -7,7 +7,6 @@ const CategoryBanner = () => {
 
     return (
         <section className="banner-container">
-
             <div className='banner-content'>
                 <p className='sub-title'>Category</p>
                 <p className='description'>Enhance Your <br /> Music Experiences</p>

@@ -4,15 +4,10 @@ import './cssComponents/Navbar.css'
 const Navbar = () => {
     return (
         <>
-            <div className="navbar-container">
-                <p></p>
-                <div className="navbar-center">
-                    {/* header */}
-                    <header className="navbar-header">
-                        <h1>Exclusive</h1>
-                    </header>
+            <nav className="navbar-container container">
 
-                    {/* nav */}
+                    <h1>Exclusive</h1>
+
                     <nav className="navbar-items">
                         <ul>
                             <li><NavLink className={"nav-navlink"} to={'/'}>Home</NavLink></li>
@@ -47,8 +42,8 @@ const Navbar = () => {
                             </button>
                         </div>
                     </div>
-                </div>
-            </div>
+            </nav>
+           
         </>
     )
 }

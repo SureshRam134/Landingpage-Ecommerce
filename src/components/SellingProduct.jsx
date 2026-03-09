@@ -55,14 +55,11 @@ const SellingProduct = () => {
 
     return (
         <>
-            <div className="selling-product-container">
-                <div className="forth-center">
-                    <Subnavbar titleName={titleName} />
-                    <ProductBox productDetails={productDetails} />
-                    {/* banner */}
-                    <CategoryBanner />
-
-                </div>
+            <div className="selling-product-container container">
+                <Subnavbar titleName={titleName} />
+                <ProductBox productDetails={productDetails} />
+                {/* banner */}
+                <CategoryBanner />
             </div>
         </>
     )

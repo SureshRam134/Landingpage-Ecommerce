@@ -1,15 +1,9 @@
 /* second container */
 .today-product-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(110px);
-    margin-bottom: 150px;
+    margin: 7% 6% 0%;
+
 }
 
-.today-product-center {
-    width: 80%;
-}
 
 /* button */
 .today-product-view-all-product {
@@ -20,14 +14,14 @@
     border: none;
     background-color: #DB4444;
     color: #ffffff;
-    position: absolute;
-    right: 45%;
     text-align: center;
-    bottom: 60px;
+    display: flex;
+    align-items: center;
+    margin: 40px auto;
+
 }
 
 hr {
     width: 100%;
-    margin: 160px 0px 0px;
     border-bottom: 0px solid #B3B3B3;
 }

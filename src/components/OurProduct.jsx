@@ -84,17 +84,17 @@ const OurProduct = () => {
     }, [scrollRef])
     return (
         <>
-            <div className="our-product-container">
-                <div className="our-product-center">
-                    {/* sub nav */}
-                    <Subnavbar titleName={titleName} />
+            <div className="our-product-container container">
 
-                    {/* our products */}
-                    <ProductBox productDetails={productDetails} titleName1="Our Products" newProduct="New product" leftSlide={leftSlide} rightSlide={rightSlide} />
-                    <div className="product-view-button">
-                        <button>View All Products</button>
-                    </div>
+                {/* sub nav */}
+                <Subnavbar titleName={titleName} />
+
+                {/* our products */}
+                <ProductBox productDetails={productDetails} titleName1="Our Products" newProduct="New product" leftSlide={leftSlide} rightSlide={rightSlide} />
+                <div className="product-view-button">
+                    <button>View All Products</button>
                 </div>
+
             </div>
         </>
     )

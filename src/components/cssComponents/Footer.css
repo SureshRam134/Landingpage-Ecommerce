@@ -1,14 +1,11 @@
 .footer-container {
-    max-width: auto;
     background-color: #000000;
 }
 
 .footer-content {
-    max-width: 80%;
-    margin: 30px auto 0px;
     padding: 60px 0px 50px 0px;
     display: flex;
-    margin: 0 auto;
+    margin: 0 6%;
 }
 
 

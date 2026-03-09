@@ -98,15 +98,14 @@ const TodayProduct = () => {
     ])
     return (
         <>
-            <div className="today-product-container">
-                <div className="today-product-center">
+            <div className="today-product-container container">
+ 
                     {/* header */}
                     <Subnavbar titleName={titleName} leftSlide={leftSlide} rightSlide={rightSlide} />
                     {/* Product */}
                     <ProductBox productDetails={productDetails} titleName1="Today's" scrollRef={scrollRef} />
                     <button className='today-product-view-all-product'>View All Products</button>
                     <hr />
-                </div>
             </div>
         </>
     )

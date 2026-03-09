@@ -1,9 +1,14 @@
 .top-container {
     background-color: #000000;
-    height: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 25px 0;
+    width: 100%;
+    z-index: 999;
 
 }
 
@@ -34,8 +39,6 @@
     outline: none;
     color: #FAFAFA;
     padding: 0px 5px;
-    width: 78px;
-    height: 24px;
     font-weight: 400;
     font-size: 14px;
 }

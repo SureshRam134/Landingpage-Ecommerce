@@ -5,7 +5,7 @@ const Subnavbar = ({ titleName, leftSlide, rightSlide, featureTitle }) => {
 
     return (
         <>
-            <div className='subnav-header-box'>
+            <div className='subnav-header-box container'>
                 <h1><span></span> {titleName.title}</h1>
                 <div className="subnav-sub-title">
 
