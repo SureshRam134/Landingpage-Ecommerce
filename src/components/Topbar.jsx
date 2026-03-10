@@ -7,14 +7,16 @@ const Topbar = () => {
 
     return (
         <>
-            <div className="top-container">
-                <div className="top-split">
-                    <p>Summer Sale For All Swim Suits And Free Express Delivery-OFF 50%! <NavLink className={"shop-link"} to= "">ShopNow</NavLink></p>
+            <div className="topbar">
+                <div className="top-container container">
 
-                    {/* lang select */}
-                    <select name="" id="">
-                        <option value="">English</option>
-                    </select>
+                    <p className="p-tag">Summer Sale For All Swim Suits And Free Express Delivery-OFF 50%! <NavLink className={"shop-link"} to="">ShopNow</NavLink></p>
+
+                    {/* lang select */}   
+                        <select className="topbar-select" name="" id="">
+                            <option value="">English</option>
+                        </select>
+                    
 
                 </div>
 

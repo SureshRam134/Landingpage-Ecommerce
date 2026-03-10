@@ -24,7 +24,7 @@ const SellingProduct = () => {
             title: "The north coat",
             price: 260,
             lessPrice: 360,
-            star: "⭐⭐⭐⭐⭐",
+            star: 4,
             comments: 65,
         },
         {
@@ -32,7 +32,7 @@ const SellingProduct = () => {
             title: "Gucci duffle bag",
             price: 960,
             lessPrice: 1160,
-            star: "⭐⭐⭐⭐⭐",
+            star: 3,
             comments: 65,
         },
         {
@@ -40,7 +40,7 @@ const SellingProduct = () => {
             title: "RGB liquid CPU Cooler",
             price: 160,
             lessPrice: 170,
-            star: "⭐⭐⭐⭐⭐",
+            star: 2,
             comments: 65,
         },
         {
@@ -48,7 +48,7 @@ const SellingProduct = () => {
             title: "Small Bookself",
             price: 360,
             lessPrice: 20,
-            star: "⭐⭐⭐⭐⭐",
+            star: 2,
             comments: 65,
         },
     ])
@@ -57,7 +57,7 @@ const SellingProduct = () => {
         <>
             <div className="selling-product-container container">
                 <Subnavbar titleName={titleName} />
-                <ProductBox productDetails={productDetails} />
+                <ProductBox productDetails={productDetails} template="2"/>
                 {/* banner */}
                 <CategoryBanner />
             </div>

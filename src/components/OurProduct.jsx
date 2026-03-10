@@ -26,7 +26,7 @@ const OurProduct = () => {
             title: "The north coat",
             price: 260,
             lessPrice: 360,
-            star: "⭐⭐⭐⭐⭐",
+            star: 2,
             comments: 65,
         },
         {
@@ -34,7 +34,7 @@ const OurProduct = () => {
             title: "Gucci duffle bag",
             price: 960,
             lessPrice: 1160,
-            star: "⭐⭐⭐⭐⭐",
+            star: 4,
             comments: 65,
         },
         {
@@ -42,7 +42,7 @@ const OurProduct = () => {
             title: "RGB liquid CPU Cooler",
             price: 160,
             lessPrice: 170,
-            star: "⭐⭐⭐⭐⭐",
+            star: 3,
             comments: 65,
         },
         {
@@ -50,7 +50,7 @@ const OurProduct = () => {
             title: "Small Bookself",
             price: 360,
             lessPrice: 20,
-            star: "⭐⭐⭐⭐⭐",
+            star: 2,
             comments: 65,
         },
         {
@@ -58,7 +58,7 @@ const OurProduct = () => {
             title: "Small Bookself",
             price: 360,
             lessPrice: 20,
-            star: "⭐⭐⭐⭐⭐",
+            star: 5,
             comments: 65,
         },
         {
@@ -66,22 +66,11 @@ const OurProduct = () => {
             title: "Small Bookself",
             price: 360,
             lessPrice: 20,
-            star: "⭐⭐⭐⭐⭐",
+            star: 4,
             comments: 65,
         },
     ])
 
-    const scrollRef = useRef(null)
-    const leftSlide = useCallback(() => {
-        alert("yuiiu")
-        scrollRef.current.scrollLeft -= 330
-
-    }, [scrollRef])
-
-    const rightSlide = useCallback(() => {
-        alert("yuiiu")
-        scrollRef.current.scrollLeft += 330
-    }, [scrollRef])
     return (
         <>
             <div className="our-product-container container">
@@ -90,7 +79,7 @@ const OurProduct = () => {
                 <Subnavbar titleName={titleName} />
 
                 {/* our products */}
-                <ProductBox productDetails={productDetails} titleName1="Our Products" newProduct="New product" leftSlide={leftSlide} rightSlide={rightSlide} />
+                <ProductBox productDetails={productDetails} template="3" newProduct="New product" />
                 <div className="product-view-button">
                     <button>View All Products</button>
                 </div>

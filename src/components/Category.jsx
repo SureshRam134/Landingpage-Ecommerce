@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from 'react';
+
 import './cssComponents/Category.css'
 import Subnavbar from './Subnavbar';
 import Mobile from '../assets/CellPhone.png'
@@ -7,6 +7,20 @@ import Computer from '../assets/Computer.png'
 import Gamepad from '../assets/Gamepad.png'
 import Headphone from '../assets/Headphone.png'
 import SmartWatch from '../assets/SmartWatch.png'
+
+
+//slider
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+// import required modules
+import { Pagination, Navigation } from 'swiper/modules';
+import { useState } from 'react';
 
 
 
@@ -58,36 +72,41 @@ const Category = () => {
         },
     ])
 
-    //slide 
-    const refSlider = useRef(null)
-    const leftSlide = useCallback(() => {
-        refSlider.current.scrollLeft -= 200
-    }, [refSlider])
-
-    const rightSlide = useCallback(() => {
-        refSlider.current.scrollLeft += 200
-    }, [refSlider])
+    const [swiperInstance, setSwiperInstance] = useState(null) 
 
     return (
         <div className="category-container container">
 
             {/* title container */}
-            <Subnavbar titleName={titleName} leftSlide={leftSlide} rightSlide={rightSlide} />
-            <div className="category-slider" ref={refSlider}>
-                <div className="category-slides">
+            <Subnavbar titleName={titleName} swiper={swiperInstance} />
+            <div className="category-slides">
+
+                <Swiper
+                    onSwiper={setSwiperInstance}
+                    slidesPerView={6}
+                    centeredSlides={false}
+                    spaceBetween={10}
+                    navigation={false}
+                    modules={[Pagination, Navigation]}
+                    className="mySwiper category-swiper"
+                >
                     {
                         category.map((item, index) => (
                             // slider content
-                            <div key={index} className="category-slide">
-                                <div className='category-box-content'>
-                                    <img src={item.image} alt="" />
-                                    <h3>{item.title}</h3>
+                            <SwiperSlide>
+                                <div key={index} className="category-slide">
+                                    <div className='category-box-content'>
+                                        <img src={item.image} alt="" />
+                                        <h3>{item.title}</h3>
+                                    </div>
                                 </div>
-                            </div>
+                            </SwiperSlide>
                         ))
                     }
-                </div>
+
+                </Swiper>
             </div>
+
 
             <hr className='hr-line' />
 

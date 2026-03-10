@@ -6,29 +6,40 @@
 
 .nav-items {
     display: flex;
+    height: auto;
+
 }
 
 .nav-items ul {
-    padding-top: 44px;
+    
+    padding: 44px 0px 0px;
     width: 100%;
     border-right: 0.5px solid #B3B3B3;
 }
 
 
 .nav-items ul li {
-    
-    height: 24px;
     list-style: none;
-    margin-bottom: 10px;
+    gap: 30px;
+    padding: 2px 0px;
+    position: relative;
 }
 
 .first-view-link {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
     color: black;
+    line-height: 29px;
     text-decoration: none;
+}
+
+.nav-items ul li span {
+    position: absolute;
+    right: 20px;
+    padding: 8px;
+
+
 }
 
 /* slide */

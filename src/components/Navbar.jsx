@@ -4,8 +4,8 @@ import './cssComponents/Navbar.css'
 const Navbar = () => {
     return (
         <>
-            <nav className="navbar-container container">
-
+            <nav className="navbar">
+                <div className="navbar-container container">
                     <h1>Exclusive</h1>
 
                     <nav className="navbar-items">
@@ -42,6 +42,8 @@ const Navbar = () => {
                             </button>
                         </div>
                     </div>
+                </div>
+
             </nav>
            
         </>

@@ -14,3 +14,12 @@
     outline: none;
     border: none;
 }
+
+
+/*  */
+
+.lolayout-container {
+ top:150px;
+  scroll-behavior: smooth;
+  transition: all 0.3s ease-out;
+}

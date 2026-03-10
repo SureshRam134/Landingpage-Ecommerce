@@ -58,17 +58,38 @@ const FirstView = () => {
 
     ]
 
+    const [dropDown, setDropDown] = useState(null) 
+
+console.log(dropDown);
+
     return (
         <div className="first-view-container ">
 
             <div className='nav-items'>
                 <ul>
                     {
-                        items.map((item) => <li><NavLink className={"first-view-link"}>{item}</NavLink></li>)
+                        items.map((item, index) => <li key={index}><NavLink className={"first-view-link"}>{item} </NavLink> { index < 2 && [1].map((itm, inx) => (
+                            <span key={inx} onClick={() => {setDropDown(index)}}><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.95 6.364L0 1.414L1.414 0L7.778 6.364L1.414 12.728L0 11.314L4.95 6.364Z" fill= {dropDown === index? "red": "black" }/>
+                            </svg>
+                            </span>
+
+                        ))}</li>)
                     }
+
+                    { dropDown === 0 &&
+                        <div>
+                            box1
+                    </div>}
+
+                    {dropDown === 1 &&
+                        <div>
+                        box2
+                    </div>}
+                    
+
                 </ul>
             </div>
-
 
             {/* slider*/}
 
@@ -88,7 +109,7 @@ const FirstView = () => {
                                 <div className='first-view-content'>
                                     <div className='first-view-text1'>
                                         <img src={item.subImg1} alt="Apple img" />
-                                        <h1>{item.title}</h1>
+                                        <h1>{item.title} </h1>
                                     </div>
                                     <div className='first-view-text2'>
                                         <h3>{item.VoucherPersentage}</h3>
@@ -102,7 +123,7 @@ const FirstView = () => {
                                 </div>
 
                                 <div className='first-view-img'>
-                                 
+
                                     <img src={item.img} alt="Mobile Img" />
                                 </div>
                             </div>
