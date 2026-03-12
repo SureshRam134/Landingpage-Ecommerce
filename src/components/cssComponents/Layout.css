@@ -1,10 +1,6 @@
-.bottom-scrool-btn {
-    position: relative;
-}
 
-.bottom-scrool-btn button {
+ .bottom-scrool-btn  {
     position: fixed;
-    right: 0px;
     bottom: 80px;
     right: 60px;
     width: 50px;
@@ -13,13 +9,6 @@
     background-color: #F5F5F5;
     outline: none;
     border: none;
-}
+} 
 
 
-/*  */
-
-.lolayout-container {
- top:150px;
-  scroll-behavior: smooth;
-  transition: all 0.3s ease-out;
-}

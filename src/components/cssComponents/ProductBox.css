@@ -1,66 +1,72 @@
 /* product box container */
 .product-container {
+    font-family: "Inter", sans-serif;
+    margin: 0 auto;
     width: 100%;
-}
-
-/* main product box */
-.product-box {
-    width: 278px;
     height: 100%;
-    cursor: pointer;
-}
-
-
-.product-content-image-control {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-
-.product-top-image-box {
-    width: 100%;
-    height: 240px;
-    border-radius: 5px;
-}
-
-
-.product-top-image-box {
     position: relative;
 }
 
-/* image div */
 .product-image {
+     display: flex;
     width: 100%;
     height: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F5F5F5;
+    background-color: rgb(193, 193, 193);
+    position: relative;
     border-radius: 5px;
+    padding: 0px;
 }
 
 .product-image img {
-    background-color: #F5F5F5;
-    width: 130px;
-    height: 135x;
+    border-radius: 5px;
+    width: 150px;
+    height: 200px;  
+    padding: 10px;
+    object-fit: contain;
 }
 
+.add-to-cart {
+    position: absolute;
+    width: 100%;
+    padding: 13px 0px;
+    bottom: 0;
+    background-color: #000000;
+    color: #F5F5F5;
+    border-radius: 0px 0px 5px 5px;
+    font-family: "Inter", sans-serif;
+    border: none;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.offer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: #DB4444;
+    color: #F5F5F5;
+    border-radius: 3px;
+}
 /* icon */
 .product-icons2 {
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    right: 15px;
-    top: 15px;
+    right: 10px;
+    top: 10px;
     gap: 10px;
 }
+
 
 .product-icons2 button {
     width: 40px;
     height: 40px;
-    padding-top: 5px;
+    padding-top: 5px;   
     outline: none;
     border: none;
     border-radius: 50%;
@@ -70,43 +76,56 @@
 
 .product-bottom-content-box {
     width: 100%;
-    height: 80px;
-    font-family: "Inter", sans-serif;
+    height: auto;
 }
 
 .product-bottom-content-box h4 {
-    width: 278px;
-    font-weight: 16px;
+    font-size: 25px;
+    overflow-y: scroll;
+    height: 40px;
     font-weight: 500;
-    padding: 7px 0px 0px;
+    padding: 10px 0px 0px 0px;
 }
+
+.product-bottom-content-box h4::-webkit-scrollbar{
+    display: none;
+}
+
 
 .product-bottom-content-box p {
-    font-weight: 16px;
+    font-size: 14px;
     font-weight: 500;
-    padding: 7px 0px;
+    padding: 10px 0px 0px 0px;
     color: #DB4444;
+}
+
+.product-bottom-content-box span {
+    color: #7F7F7F;
+
+}
+
+
+
+/* show product button */
+.product-Params-button {
     display: flex;
+    justify-content: space-between;
 }
 
-.product-bottom-content-box p span {
-    color: #7F7F7F;
-    text-decoration: line-through;
-    padding: 0px 0px 0px 10px
+.product-Params-button button {
+    outline: none;
+    border: none;
 }
 
-.product-bottom-content-box h5 {
-    font-weight: 19px;
-    font-weight: 500;
-    padding: 7px px;
-    
+.product-Params-button .params-navlink{
+    color: #DB4444;
+    padding: 8px 8px;
+    font-family:"Inter", sans-serif;
+    text-decoration: none;
+    background-color: rgb(206, 205, 205);
+    border-radius: 3px;
+    font-weight: 600;
 }
-
-.product-bottom-content-box h5 span {
-    color: #7F7F7F;
-    padding: 0px 0px 0px 1px
-}
-
 
 
 
@@ -115,19 +134,6 @@
 .product-icons1 {
     display: flex;
     justify-content: space-between;
-}
-
-.offer {
-    position: absolute;
-    left: 15px;
-    top: 17px;
-}
-
-.offer {
-    padding: 5px 10px;
-    background-color: #DB4444;
-    color: #F5F5F5;
-    border-radius: 3px;
 }
 
 .icons {
@@ -150,54 +156,10 @@
     background-color: #ffffff;
 }
 
-.add-to-cart {
-    position: absolute;
-    width: 100%;
-    height: 40px;
-    background-color: #000000;
-    color: #F5F5F5;
-    bottom: 0%;
-    border-radius: 0px 0px 5px 5px;
-    font-family: "Inter", sans-serif;
-    border: none;
-    font-size: 15px;
-    letter-spacing: 0.5px;
-}
 
 
 
 
-/* our product components - price update */
-.our-Product-prices {
-    font-weight: 16px;
-    font-weight: 500;
-    padding: 7px 0px;
-    color: #DB4444;
-}
 
 
 
-
-.product-swiper {
-    gap: 10px;
-    width: auto;
-    
-    
-}
-
-.swiper-button-next{
-    position: absolute;
-    right: 0;
-    background-color: blue;
-}
-
-.swiper-button-prev, .swiper-button-next{
-    position: absolute;
-    right: 0px;
-    width: var(--swiper-navigation-size);
-    height: var(--swiper-navigation-size);
-    z-index: 10;
-
-    cursor: pointer;
-    color: var(--swiper-navigation-color, var(--swiper-theme-color));
-}

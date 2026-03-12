@@ -7,6 +7,16 @@ import Bag from '../assets/Product_bag_Best.png'
 import Speaker from '../assets/Product_speaker_Best.png'
 import Table from '../assets/Product_table_Best.png'
 import CategoryBanner from "./CategoryBanner"
+// slider
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+// import required modules
+import { Pagination, Navigation } from 'swiper/modules';
 
 
 const SellingProduct = () => {
@@ -57,7 +67,21 @@ const SellingProduct = () => {
         <>
             <div className="selling-product-container container">
                 <Subnavbar titleName={titleName} />
-                <ProductBox productDetails={productDetails} template="2"/>
+                <Swiper
+                    // onSwiper={setSwiperInstance}
+                    slidesPerView={4}
+                    centeredSlides={false}
+                    spaceBetween={35}
+                    navigation={false}
+                    modules={[Pagination, Navigation]}
+                    className="product-swiper"
+                >
+                    {productDetails.map((item, index) => (
+                        <SwiperSlide>
+                            <ProductBox  productData= {item} index = {index}  template="2"/>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
                 {/* banner */}
                 <CategoryBanner />
             </div>

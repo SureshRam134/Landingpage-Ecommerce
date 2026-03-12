@@ -5,6 +5,16 @@ import Subnavbar from "./Subnavbar"
 import Chaco from '../assets/ourProduct-chaco.png'
 import Laptop from '../assets/ourProductLaptop.png'
 import Camera from '../assets/ourProductCam.png'
+// slider
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+// import required modules
+import { Pagination, Navigation } from 'swiper/modules';
 
 
 
@@ -71,15 +81,32 @@ const OurProduct = () => {
         },
     ])
 
+//slider state
+const [swiperInstance, setSwiperInstance] = useState(null)
+
     return (
         <>
             <div className="our-product-container container">
 
                 {/* sub nav */}
-                <Subnavbar titleName={titleName} />
+                <Subnavbar titleName={titleName} swiper= {swiperInstance}/>
 
                 {/* our products */}
-                <ProductBox productDetails={productDetails} template="3" newProduct="New product" />
+                <Swiper
+                    onSwiper={setSwiperInstance}
+                    slidesPerView={4}
+                    centeredSlides={false}
+                    spaceBetween={35}
+                    navigation={false}
+                    modules={[Pagination, Navigation]}
+                    className="product-swiper"
+                >
+                    {productDetails.map((item, index) => (
+                        <SwiperSlide>
+                            <ProductBox  productData= {item} index = {index}  template="3"/>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
                 <div className="product-view-button">
                     <button>View All Products</button>
                 </div>
