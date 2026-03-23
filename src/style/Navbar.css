@@ -102,6 +102,20 @@
     }
 
 
+    .user-profile-link {
+        width: 40px;
+        height: 40px;
+        text-decoration: none;
+        background-color: #B3B3B3;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+
+
 
 
 

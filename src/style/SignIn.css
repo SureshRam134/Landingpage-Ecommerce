@@ -114,3 +114,11 @@
     color: var(--primary-textcolor-graylight);
     border-bottom: 2px solid var(--primary-border-darklight);
 }
+
+.pass-visiable-icon {
+        position: relative;
+}
+.pass-icon {
+    position: absolute;
+    right: 0;
+}

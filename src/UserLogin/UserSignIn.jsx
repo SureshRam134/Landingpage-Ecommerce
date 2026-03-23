@@ -11,7 +11,7 @@ const UserSignIn = () => {
 
                 <div className='user-signin'>
                     <div>
-                        <SignIn  />
+                        <SignIn />
                     </div>
                 
                 </div>

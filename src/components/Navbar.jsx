@@ -1,7 +1,11 @@
 import { NavLink } from "react-router-dom";
 import '../style/Navbar.css'
+import { useContext } from "react";
+import { Context } from "../Context/CreateContext";
 
 const Navbar = () => {
+    const {currentUser} = useContext(Context)
+
     return (
         <>
             <nav className="navbar">
@@ -10,10 +14,10 @@ const Navbar = () => {
 
                     <nav className="navbar-items">
                         <ul>
-                            <li><NavLink className={"nav-navlink"} to={'/'}>Home</NavLink></li>
-                            <li><NavLink className={"nav-navlink"} to={'/contact'}>Contact</NavLink></li>
-                            <li><NavLink className={"nav-navlink"} to={'/about'}>About</NavLink></li>
-                            <li><NavLink className={"nav-navlink"} to={'/signup'}>Sign Up</NavLink></li>
+                            <li><NavLink className={"nav-navlink"} to='/'>Home</NavLink></li>
+                            <li><NavLink className={"nav-navlink"} to={  '/contact'}>Contact</NavLink></li>
+                            <li><NavLink className={"nav-navlink"} to={'/about' }>About</NavLink></li>
+                            <li><NavLink className={"nav-navlink"} to={currentUser?'/signup' : "/login"}>Sign Up</NavLink></li>
                         </ul>
                     </nav>
 
@@ -41,6 +45,11 @@ const Navbar = () => {
                             </svg>
                             </button>
                         </div>
+
+                         {currentUser && <NavLink to="/profile" className="user-profile-link">
+                            <span>{currentUser.slice(0,5) }</span>
+                         </NavLink>}
+
                     </div>
                 </div>
 
