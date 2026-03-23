@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
 import Navbar from "./Navbar"
 import Topbar from "./Topbar"
-import './cssComponents/Layout.css'
+import '../style/Layout.css'
 // import { useRef } from "react";
 
 

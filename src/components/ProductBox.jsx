@@ -1,4 +1,4 @@
-import './cssComponents/ProductBox.css'
+import '../style/ProductBox.css'
 import { useState } from "react"
 import { NavLink } from 'react-router-dom';
 

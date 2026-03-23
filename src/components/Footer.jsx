@@ -1,4 +1,4 @@
-import './cssComponents/Footer.css'
+import '../style/Footer.css'
 import Qr from '../assets/Qr-Code.png'
 import GooglePlay from '../assets/GooglePlay.png'
 import AppStore from '../assets/appstore.png'

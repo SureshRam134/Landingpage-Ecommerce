@@ -1,5 +1,5 @@
 import { useCallback, useRef, useState } from "react"
-import './cssComponents/OurProduct.css'
+import '../style/OurProduct.css'
 import ProductBox from "./ProductBox"
 import Subnavbar from "./Subnavbar"
 import Chaco from '../assets/ourProduct-chaco.png'

@@ -1,7 +1,7 @@
 import { useState } from "react"
 import ProductBox from "./ProductBox"
 import Subnavbar from "./Subnavbar"
-import './cssComponents/SellingProduct.css'
+import '../style/SellingProduct.css'
 import Shirt from '../assets/Product_shirt_Best.png'
 import Bag from '../assets/Product_bag_Best.png'
 import Speaker from '../assets/Product_speaker_Best.png'

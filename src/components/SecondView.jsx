@@ -1,5 +1,5 @@
 
-import './cssComponents/SecondView.css'
+import '../style/SecondView.css'
 import Left from '../assets/Left-Arrow.png'
 import Product1 from '../assets/product1.png'
 import star from '../assets/start.png'

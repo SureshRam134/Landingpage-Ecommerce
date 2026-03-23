@@ -1,5 +1,5 @@
 
-import './cssComponents/Subnavbar.css'
+import '../style/Subnavbar.css'
 
 const Subnavbar = ({ titleName, featureTitle, swiper }) => {
 

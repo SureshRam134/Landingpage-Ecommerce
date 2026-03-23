@@ -1,4 +1,4 @@
-import './cssComponents/items.css'
+import '../style/items.css'
 
 const Card = ({ design = {}, data = {} }) => {
 

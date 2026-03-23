@@ -1,5 +1,5 @@
 
-import './cssComponents/Category.css'
+import '../style/Category.css'
 import Subnavbar from './Subnavbar';
 import Mobile from '../assets/CellPhone.png'
 import Camera from '../assets/Camera.png'

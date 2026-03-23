@@ -1,4 +1,4 @@
-import './cssComponents/CategoryBanner.css'
+import '../style/CategoryBanner.css'
 import BannerImg from '../assets/Banner.png'
 import BannerBack from '../assets/BlurShadow.png'
 

@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 // import required modules
 import { Pagination } from 'swiper/modules';
 import { NavLink } from 'react-router-dom';
-import './cssComponents/FirstView.css'
+import '../style/FirstView.css'
 import RightImg from '../assets/hero1.jpg'
 import Apples from '../assets/apples.png'
 import ArrowRight from '../assets/arrow-right.png'

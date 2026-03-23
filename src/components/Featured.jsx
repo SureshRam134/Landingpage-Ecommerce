@@ -1,7 +1,7 @@
 
 import { NavLink } from "react-router-dom";
 import Subnavbar from "./Subnavbar";
-import './cssComponents/Featured.css'
+import '../style/Featured.css'
 import FreeDelivery from '../assets/feature-free.png'
 import Services from '../assets/feature-services.png'
 import Money from '../assets/feature-money.png'

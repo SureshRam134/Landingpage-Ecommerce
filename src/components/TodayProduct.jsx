@@ -1,4 +1,4 @@
-import './cssComponents/TodayProduct.css'
+import '../style/TodayProduct.css'
 import ProductBox from "./ProductBox";
 import Subnavbar from "./Subnavbar";
 import Shirt from '../assets/Product_shirt_Best.png'

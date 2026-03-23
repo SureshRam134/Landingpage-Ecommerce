@@ -1,0 +1,19 @@
+#root {
+    --primart-textcolor-light: #ffffff;
+    --secondary-textcolor-light: #FAFAFA;
+    --primary-textcolor-dark: #000000;
+    --primary-textcolor-graylight: #4D4D4D;
+    --primary-textcolor-pinklight: #D94343;
+    --primary--error:red;
+    --primary--success:Green;
+
+    /* background */
+    --primary-sign-btn-bg: #D94343;
+    --primart-light-bg: #ffffff;
+    --primart-dark-bg: #000000;
+
+
+    /* border */
+    --primary-border-darklight: rgb(0, 0, 0, 0.5);
+    --secondary-border-darklight :rgb(0, 0, 0, 0.4);
+}

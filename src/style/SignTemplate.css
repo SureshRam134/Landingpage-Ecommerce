@@ -1,0 +1,140 @@
+
+
+.sign-container {
+    width: 100%;
+    height: 100vh;
+    padding: 60px 145px 60px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.sign-container  img{
+    width: 65%;
+    height: 100%;
+}
+
+.sign-content {
+    width: 371px;
+
+}
+
+.sign-title {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 36px;
+    color: var( --primary-textcolor-dark);
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.04em;
+}
+
+.sign-description {
+        font-size: 16px;
+    font-weight: 400;
+    line-height: 24px 0px ;
+    color: var( --primary-textcolor-dark);
+    font-family: "Inter", sans-serif;
+    padding: 24px 0 34px 0;
+}
+
+.sign-form {
+    display: flex;
+   flex-direction: column;
+}
+
+.sign-input {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: 'Poppins',sans-serif;
+    color: var(--text-color-dark);
+    width: 100%;
+    outline:  none;
+    border: none;
+    border-bottom: 2px solid var(--primary-border-darklight);
+    height: 32px;
+    margin: 14px 0px 14px 0px;
+}
+
+.sign-error::before{
+    content: "";
+    color: var(--primary--error);
+    font-size: 15px;
+    font-weight: 500;
+    font-family: sans-serif;
+    line-height: 0;
+}
+.sign-error::after {
+    content: "";
+    color: var(--primary--success);
+    font-size: 15px;
+    font-weight: 500;
+    font-family: sans-serif;
+    line-height: 0;
+}
+
+
+.sign-conformation-btn {
+    width: 100%;
+    height: 56px;
+    padding: 16px;
+    margin: 26px 0px 8px 0px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    color: var(--secondary-textcolor-light);
+    background-color: var(--primary-sign-btn-bg);
+    outline: none;
+    border: none;
+    line-height: 24px;
+}
+
+.sign-googlebtn-signup {
+    width: 100%;
+    height: 56px;
+    padding: 16px 0px;
+    outline: none;
+    border: 1px solid var(--secondary-border-darklight );
+    margin: 8px 0px 0px 0px;
+    border-radius: 4px;
+    background-color: var(--primart-light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: 'Poppins', sans-serif;
+    
+    
+}
+.sign-google-link {
+    color: var(--text-color-dark);
+    text-decoration: none;
+}
+
+.sign-sub-description {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    line-height: 24px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto !important;
+    padding: 24px 0px;
+}
+
+.sign-log-link-path {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    line-height: 24px;
+    margin: 0px 16px;
+    outline: none;
+    border: none;
+    color: var(--primary-textcolor-graylight);
+    border-bottom: 2px solid var(--primary-border-darklight);
+}

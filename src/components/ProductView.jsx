@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import './cssComponents/ProductView.css'
+import '../style/ProductView.css'
 import { useEffect, useState } from "react";
 import Shirt from '../assets/Product_shirt_Best.png'
 import Bag from '../assets/Product_bag_Best.png'

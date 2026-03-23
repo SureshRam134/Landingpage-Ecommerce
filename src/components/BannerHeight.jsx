@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
-import './cssComponents/BannerHeight.css'
+import '../style/BannerHeight.css'
 
-
+ 
 const BannerHeight = () => {
 
     return (

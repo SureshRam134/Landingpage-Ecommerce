@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import './cssComponents/ProductBox.css'
+import '../style/ProductBox.css'
 
 // slider
 // Import Swiper React components
