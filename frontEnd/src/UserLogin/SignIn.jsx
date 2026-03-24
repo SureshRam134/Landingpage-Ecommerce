@@ -6,8 +6,12 @@ import { useContext, useState } from 'react';
 
 
 const SignIn = ({ links = {} }) => {
-    const { userData, setUserData, currentUser } = useContext(Context);
+
+    const { userData, setUserData, currentUser, dbUser} = useContext(Context);
+    
+    
     const navigate = useNavigate()
+
 
     const autoHomeNavFun = (data) => {
         if (data?.role) {
@@ -33,23 +37,7 @@ const SignIn = ({ links = {} }) => {
         }
     }
 
-    const ourUser = [
-        {
-            role: 1,
-            email: "user@gmail.com",
-            password: "user@1"
-        },
-        {
-            role: 2,
-            email: "admin@gmail.com",
-            password: "admin@1"
-        },
-        {
-            role: 3,
-            email: "dealer@gmail.com",
-            password: "dealer@1"
-        },
-    ]
+    
 
 
     let initional = {
@@ -82,17 +70,17 @@ const SignIn = ({ links = {} }) => {
             return;
         }
 
-        const findUser = ourUser.find((item) => item.email === email)
-        console.log(findUser);
+        const findUser = dbUser.find((item) => item.email === email)
+        // console.log(findUser);
 
         if (!findUser) return alert("Email Invaild")
         if (findUser.password !== password) return alert("Invaild Password")
 
         const checkUser = ["User", "Delar", "Admin"]
         if(checkUser.includes(links.title)) {
-            if(findUser.role === 1 && links.title !== "User") return navigate( '/login')
-            else if(findUser.role === 2 && links.title !== "Admin") return navigate('/admin/login')
-            else if (findUser.role === 3 && links.title !== "Dealer") return navigate('/Delar/login')
+            if(findUser.id === 1 && links.title !== "User") return navigate( '/login')
+            else if(findUser.id === 2 && links.title !== "Admin") return navigate('/admin/login')
+            else if (findUser.id === 3 && links.title !== "Dealer") return navigate('/Delar/login')
         }
 
 
@@ -100,7 +88,7 @@ const SignIn = ({ links = {} }) => {
         setLogUser(initional)
         setLogError(initional)
         const currentUser = {
-            role: findUser.role,
+            role: findUser.id,
             email: findUser.email,
         }
         localStorage.setItem("user", JSON.stringify(currentUser))
