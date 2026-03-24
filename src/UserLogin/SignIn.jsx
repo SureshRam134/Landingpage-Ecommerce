@@ -76,7 +76,7 @@ const SignIn = ({ links = {} }) => {
         if (!findUser) return alert("Email Invaild")
         if (findUser.password !== password) return alert("Invaild Password")
 
-        const checkUser = ["User", "Delar", "Admin"]
+        const checkUser = ["User", "Dealar", "Admin"]
         if(checkUser.includes(links.title)) {
             if(findUser.id === 1 && links.title !== "User") return navigate( '/login')
             else if(findUser.id === 2 && links.title !== "Admin") return navigate('/admin/login')
