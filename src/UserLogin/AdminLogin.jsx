@@ -3,10 +3,12 @@ import SignIn from './SignIn';
 import Sign_img from '../assets/sign-img.png'
 
 
-const UserSignIn = () => {
+
+const AdminLogin = () => {
+
     const links = {
-         title : "User",
-         reLocate : "/"
+         title : "Admin",
+         reLocate : "/admin/"
     }
     return (
         <>
@@ -25,4 +27,8 @@ const UserSignIn = () => {
 }
 
 
-export default UserSignIn;
+
+
+
+
+export default AdminLogin;

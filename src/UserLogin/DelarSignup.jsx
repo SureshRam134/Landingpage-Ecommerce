@@ -1,16 +1,16 @@
-
 import '../style/UserSignUp.css'
 import SignUp from './SignUp';
-
 import Sign_img from '../assets/sign-img.png'
 
 
-const UserSignUp = () => {
+
+const DelarSignup = () => {
     const links = {
-         title : "User",
-         logLink : "/login",
+         title : "Delar",
+         logLink : "/delar/delarlog"
     }
-    return (
+
+     return (
         <>
             <div className="user-signup-container">
                 <img src={Sign_img} alt="" />
@@ -26,5 +26,4 @@ const UserSignUp = () => {
 }
 
 
-
-export default UserSignUp;
+export default DelarSignup

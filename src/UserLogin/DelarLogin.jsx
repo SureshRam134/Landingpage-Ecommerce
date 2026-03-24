@@ -3,10 +3,11 @@ import SignIn from './SignIn';
 import Sign_img from '../assets/sign-img.png'
 
 
-const UserSignIn = () => {
+
+const DelarLogin = () => {
     const links = {
-         title : "User",
-         reLocate : "/"
+         title : "Delar",
+         reLocate : "/delar/"
     }
     return (
         <>
@@ -24,5 +25,4 @@ const UserSignIn = () => {
     )
 }
 
-
-export default UserSignIn;
+export default DelarLogin;

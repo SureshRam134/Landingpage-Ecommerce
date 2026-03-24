@@ -5,7 +5,7 @@ import { useContext, useState } from 'react';
 import { Context } from '../Context/CreateContext';
 
 
-const SignUp = () => {
+const SignUp = ({links= {}}) => {
     const { userData, setUserData } = useContext(Context);
 
 
@@ -90,7 +90,7 @@ const SignUp = () => {
 
         <>
             <div className="signup-container">
-                <h1 className="signup-title">Create an account</h1>
+                <h1 className="signup-title">Create an {links.title} account</h1>
                 <p className="signup-description">Enter your details below</p>
                 <form action="" className='signup-form' onSubmit={userSubmitFun}>
                     <input type="text"
@@ -138,7 +138,7 @@ const SignUp = () => {
                         <span style={{ paddingLeft: "16px" }}>Sign up with Google</span>
                     </button>
                 </NavLink>
-                <p className="signup-sub-description">Already have account? <NavLink to="/login" className='signup-log-link-path'>Log in</NavLink></p>
+                <p className="signup-sub-description">Already have account? <NavLink to={links.logLink}className='signup-log-link-path'>Log in</NavLink></p>
             </div>
         </>
     )

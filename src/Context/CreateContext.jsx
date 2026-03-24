@@ -9,7 +9,7 @@ const CreateContext = ({children}) => {
 
     // current user
     const user = localStorage.getItem("user")
-    const currentUser = user ? user : ""
+    const currentUser = user ? JSON.parse(user) : ""
     
     // get data
     const getdata = localStorage.getItem ("registered");
@@ -17,10 +17,6 @@ const CreateContext = ({children}) => {
 
     const userDataFun = () => {
         setUserData(data)
-    }
-
-    const currentUserFun = () => {
-        setCurrentUser(user)
     }
 
     useEffect (() => {

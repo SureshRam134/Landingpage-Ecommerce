@@ -1,23 +1,25 @@
-
 import '../style/UserSignUp.css'
 import SignUp from './SignUp';
-
 import Sign_img from '../assets/sign-img.png'
 
 
-const UserSignUp = () => {
+
+const AdminSignup = () => {
+
     const links = {
-         title : "User",
-         logLink : "/login",
+        title : "Admin",
+        logLink : "/admin/adminsign"
+
     }
-    return (
+
+     return (
         <>
             <div className="user-signup-container">
                 <img src={Sign_img} alt="" />
 
                 <div className='user-signup'>
                     <div>
-                        <SignUp links= {links}/>
+                        <SignUp links={links}/>
                     </div>
                 </div>
             </div>
@@ -27,4 +29,8 @@ const UserSignUp = () => {
 
 
 
-export default UserSignUp;
+
+
+
+
+export default AdminSignup;

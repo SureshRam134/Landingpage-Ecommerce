@@ -3,7 +3,9 @@ import '../style/Navbar.css'
 import { useContext } from "react";
 import { Context } from "../Context/CreateContext";
 
-const Navbar = () => {
+const Navbar = ({listItems = {}}) => {
+
+    
     const {currentUser} = useContext(Context)
 
     return (
@@ -14,10 +16,9 @@ const Navbar = () => {
 
                     <nav className="navbar-items">
                         <ul>
-                            <li><NavLink className={"nav-navlink"} to='/'>Home</NavLink></li>
-                            <li><NavLink className={"nav-navlink"} to={  '/contact'}>Contact</NavLink></li>
-                            <li><NavLink className={"nav-navlink"} to={'/about' }>About</NavLink></li>
-                            <li><NavLink className={"nav-navlink"} to={currentUser?'/signup' : "/login"}>Sign Up</NavLink></li>
+                           { listItems?.map((item, index) => (
+                               <li key={index} ><NavLink className={"nav-navlink"} to={item.link}>{item.linkName}</NavLink></li>
+                           )) }
                         </ul>
                     </nav>
 
@@ -47,7 +48,7 @@ const Navbar = () => {
                         </div>
 
                          {currentUser && <NavLink to="/profile" className="user-profile-link">
-                            <span>{currentUser.slice(0,5) }</span>
+                            <span>{currentUser.email.slice(0,5) }</span>
                          </NavLink>}
 
                     </div>
