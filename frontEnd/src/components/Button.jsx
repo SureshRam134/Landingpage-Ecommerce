@@ -1,4 +1,4 @@
-import './cssComponents/Button.css'
+import '../style/Button.css'
 
 const Button = () => {
     <div className="product-view-button">

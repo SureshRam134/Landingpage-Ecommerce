@@ -1,4 +1,4 @@
-import './cssComponents/CategoryBanner.css'
+import '../style/CategoryBanner.css'
 import BannerImg from '../assets/Banner.png'
 import BannerBack from '../assets/BlurShadow.png'
 
@@ -7,7 +7,6 @@ const CategoryBanner = () => {
 
     return (
         <section className="banner-container">
-
             <div className='banner-content'>
                 <p className='sub-title'>Category</p>
                 <p className='description'>Enhance Your <br /> Music Experiences</p>

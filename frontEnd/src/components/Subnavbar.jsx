@@ -1,11 +1,11 @@
 
-import './cssComponents/Subnavbar.css'
+import '../style/Subnavbar.css'
 
-const Subnavbar = ({ titleName, leftSlide, rightSlide, featureTitle }) => {
+const Subnavbar = ({ titleName, featureTitle, swiper }) => {
 
     return (
         <>
-            <div className='subnav-header-box'>
+            <div className='subnav-header-box container'>
                 <h1><span></span> {titleName.title}</h1>
                 <div className="subnav-sub-title">
 
@@ -53,13 +53,13 @@ const Subnavbar = ({ titleName, leftSlide, rightSlide, featureTitle }) => {
                                 :
                                 <div className='subnav-slide-center'>
                                     {!featureTitle && <button
-                                        onClick={leftSlide}
+                                        onClick={() => swiper?.slidePrev()}
                                     ><svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8 1L1 8L8 15M1 8H17" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </button>}
                                     {!featureTitle && <button
-                                        onClick={rightSlide}
+                                    onClick={() => swiper?.slideNext()}
                                     ><svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0.75 7.75H17.25M17.25 7.75L10.25 0.75M17.25 7.75L10.25 14.75" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>

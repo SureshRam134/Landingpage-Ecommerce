@@ -11,9 +11,7 @@ const Home = () => {
 
     return (
         <>
-            <div className="home-container">
-                {/* main */}
-                <main>
+            <div className="container">
                     {/* first page */}
                     <FirstView />
 
@@ -31,8 +29,6 @@ const Home = () => {
 
                     {/* Featured */}
                     <Featured />
-                </main>
-
             </div>
         </>
     )

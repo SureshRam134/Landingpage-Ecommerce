@@ -1,0 +1,92 @@
+.card-container {
+    font-family: "Inter", sans-serif;
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    position: relative;
+}
+
+
+.image-box {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(193, 193, 193);
+    position: relative;
+    border-radius: 5px;
+    padding: 60px;
+}
+
+.image-box img {
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    object-fit: contain;
+}
+
+.icon-offer p {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 25px;
+    padding: 5px 10px;
+    background-color: #DB4444;
+    color: #F5F5F5;
+    border-radius: 3px;
+}
+
+.icon-offer .icon {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 25px;
+    top: 25px;
+    gap: 10px;
+}
+
+.icon-offer .icon button{
+    width: 40px;
+    height: 40px;
+    padding-top: 5px;   
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+
+.content-box {
+    width: 100%;
+    height: auto;
+
+}
+
+.content-box h1{
+    font-size: 50px;
+    overflow-y: scroll;
+    height: 70px;
+    font-weight: 500;
+    padding: 20px 0px 0px 5px;
+
+}
+
+.content-box h1::-webkit-scrollbar{
+    display: none;
+}
+
+
+.content-box p {
+    font-size: 25px;
+    font-weight: 500;
+    padding: 20px 0px 0px  0px;
+    color: #DB4444;
+}
+
+.content-box p span {
+text-decoration: line-through;
+color: #7F7F7F;
+padding: 0px 0px 0px 20px;
+}

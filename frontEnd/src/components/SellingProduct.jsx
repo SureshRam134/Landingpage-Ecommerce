@@ -1,12 +1,22 @@
 import { useState } from "react"
 import ProductBox from "./ProductBox"
 import Subnavbar from "./Subnavbar"
-import './cssComponents/SellingProduct.css'
+import '../style/SellingProduct.css'
 import Shirt from '../assets/Product_shirt_Best.png'
 import Bag from '../assets/Product_bag_Best.png'
 import Speaker from '../assets/Product_speaker_Best.png'
 import Table from '../assets/Product_table_Best.png'
 import CategoryBanner from "./CategoryBanner"
+// slider
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+// import required modules
+import { Pagination, Navigation } from 'swiper/modules';
 
 
 const SellingProduct = () => {
@@ -24,7 +34,7 @@ const SellingProduct = () => {
             title: "The north coat",
             price: 260,
             lessPrice: 360,
-            star: "⭐⭐⭐⭐⭐",
+            star: 4,
             comments: 65,
         },
         {
@@ -32,7 +42,7 @@ const SellingProduct = () => {
             title: "Gucci duffle bag",
             price: 960,
             lessPrice: 1160,
-            star: "⭐⭐⭐⭐⭐",
+            star: 3,
             comments: 65,
         },
         {
@@ -40,7 +50,7 @@ const SellingProduct = () => {
             title: "RGB liquid CPU Cooler",
             price: 160,
             lessPrice: 170,
-            star: "⭐⭐⭐⭐⭐",
+            star: 2,
             comments: 65,
         },
         {
@@ -48,21 +58,32 @@ const SellingProduct = () => {
             title: "Small Bookself",
             price: 360,
             lessPrice: 20,
-            star: "⭐⭐⭐⭐⭐",
+            star: 2,
             comments: 65,
         },
     ])
 
     return (
         <>
-            <div className="selling-product-container">
-                <div className="forth-center">
-                    <Subnavbar titleName={titleName} />
-                    <ProductBox productDetails={productDetails} />
-                    {/* banner */}
-                    <CategoryBanner />
-
-                </div>
+            <div className="selling-product-container container">
+                <Subnavbar titleName={titleName} />
+                <Swiper
+                    // onSwiper={setSwiperInstance}
+                    slidesPerView={4}
+                    centeredSlides={false}
+                    spaceBetween={35}
+                    navigation={false}
+                    modules={[Pagination, Navigation]}
+                    className="product-swiper"
+                >
+                    {productDetails.map((item, index) => (
+                        <SwiperSlide>
+                            <ProductBox  productData= {item} index = {index}  template="2"/>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+                {/* banner */}
+                <CategoryBanner />
             </div>
         </>
     )

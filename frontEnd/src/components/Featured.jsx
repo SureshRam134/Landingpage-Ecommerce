@@ -1,7 +1,7 @@
 
 import { NavLink } from "react-router-dom";
 import Subnavbar from "./Subnavbar";
-import './cssComponents/Featured.css'
+import '../style/Featured.css'
 import FreeDelivery from '../assets/feature-free.png'
 import Services from '../assets/feature-services.png'
 import Money from '../assets/feature-money.png'
@@ -10,8 +10,8 @@ import Money from '../assets/feature-money.png'
 const Featured = () => {
     // title
     const titleName = {
-        title: "Our Products",
-        subTitle: "Explore Our Products"
+        title: "Featured",
+        subTitle: "New Arrival"
     }
 
 
@@ -37,60 +37,59 @@ const Featured = () => {
     return (
 
         <>
-            <div className="featured-container">
-                <div className="featured-center">
-                    {/* subnav */}
-                    <Subnavbar titleName={titleName} featureTitle="featured" />
+            <div className="featured-container container">
 
-                    <div className="featured-box">
-                        <div className="featured-left-box">
-                            <div className="featured-left-centent">
-                                <h1>PlayStation 5</h1>
-                                <p>Black and White version of the PS5<br /> coming out on sale.</p>
+                {/* subnav */}
+                <Subnavbar titleName={titleName} featureTitle="featured" />
+
+                <div className="featured-box">
+                    <div className="featured-left-box">
+                        <div className="featured-left-centent">
+                            <h1>PlayStation 5</h1>
+                            <p>Black and White version of the PS5<br /> coming out on sale.</p>
+                            <button><NavLink className="feature-nav-link">Shop Now</NavLink></button>
+
+                        </div>
+                    </div>
+                    <div className="featured-right-box">
+                        <div className="right-box-top" >
+                            <div className="right-box-top-content">
+                                <h1>Women's Collections</h1>
+                                <p>Featured woman collections that<br /> give you another vibe</p>
                                 <button><NavLink className="feature-nav-link">Shop Now</NavLink></button>
-
                             </div>
                         </div>
-                        <div className="featured-right-box">
-                            <div className="right-box-top" >
-                                <div className="right-box-top-content">
-                                    <h1>Women's Collections</h1>
-                                    <p>Featured woman collections that<br /> give you another vibe</p>
+                        <div className="right-box-bottom">
+
+                            <div className="right-box-bottom-left">
+                                <div className="bottom-left-content">
+                                    <h1>Speakers</h1>
+                                    <p>Amazon wireless speakers</p>
                                     <button><NavLink className="feature-nav-link">Shop Now</NavLink></button>
                                 </div>
                             </div>
-                            <div className="right-box-bottom">
-
-                                <div className="right-box-bottom-left">
-                                    <div className="bottom-left-content">
-                                        <h1>Speakers</h1>
-                                        <p>Amazon wireless speakers</p>
-                                        <button><NavLink className="feature-nav-link">Shop Now</NavLink></button>
-                                    </div>
-                                </div>
-                                <div className="right-box-bottom-right">
-                                    <div className="bottom-right-content">
-                                        <h1>Perfume</h1>
-                                        <p>GUCCI INTENSE OUD EDP</p>
-                                        <button><NavLink className="feature-nav-link">Shop Now</NavLink></button>
-                                    </div>
+                            <div className="right-box-bottom-right">
+                                <div className="bottom-right-content">
+                                    <h1>Perfume</h1>
+                                    <p>GUCCI INTENSE OUD EDP</p>
+                                    <button><NavLink className="feature-nav-link">Shop Now</NavLink></button>
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
-                    <div className="addictional-informatioin">
-                        {
-                            informationText.map((item, index) => (
-                                <div key={index} className="addictional-information-ontent">
-                                    <img src={item.image} alt="additional info Images" />
-                                    <h2>{item.title}</h2>
-                                    <p>{item.descrpition}</p>
-                                </div>
-                            ))
-                        }
-                    </div>
+                </div>
+
+                <div className="addictional-informatioin">
+                    {
+                        informationText.map((item, index) => (
+                            <div key={index} className="addictional-information-ontent">
+                                <img src={item.image} alt="additional info Images" />
+                                <h2>{item.title}</h2>
+                                <p>{item.descrpition}</p>
+                            </div>
+                        ))
+                    }
                 </div>
 
             </div>

@@ -1,10 +1,20 @@
-import { useState } from "react"
-import './cssComponents/OurProduct.css'
+import { useCallback, useRef, useState } from "react"
+import '../style/OurProduct.css'
 import ProductBox from "./ProductBox"
 import Subnavbar from "./Subnavbar"
 import Chaco from '../assets/ourProduct-chaco.png'
 import Laptop from '../assets/ourProductLaptop.png'
 import Camera from '../assets/ourProductCam.png'
+// slider
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+// import required modules
+import { Pagination, Navigation } from 'swiper/modules';
 
 
 
@@ -26,7 +36,7 @@ const OurProduct = () => {
             title: "The north coat",
             price: 260,
             lessPrice: 360,
-            star: "⭐⭐⭐⭐⭐",
+            star: 2,
             comments: 65,
         },
         {
@@ -34,7 +44,7 @@ const OurProduct = () => {
             title: "Gucci duffle bag",
             price: 960,
             lessPrice: 1160,
-            star: "⭐⭐⭐⭐⭐",
+            star: 4,
             comments: 65,
         },
         {
@@ -42,7 +52,7 @@ const OurProduct = () => {
             title: "RGB liquid CPU Cooler",
             price: 160,
             lessPrice: 170,
-            star: "⭐⭐⭐⭐⭐",
+            star: 3,
             comments: 65,
         },
         {
@@ -50,7 +60,7 @@ const OurProduct = () => {
             title: "Small Bookself",
             price: 360,
             lessPrice: 20,
-            star: "⭐⭐⭐⭐⭐",
+            star: 2,
             comments: 65,
         },
         {
@@ -58,7 +68,7 @@ const OurProduct = () => {
             title: "Small Bookself",
             price: 360,
             lessPrice: 20,
-            star: "⭐⭐⭐⭐⭐",
+            star: 5,
             comments: 65,
         },
         {
@@ -66,24 +76,41 @@ const OurProduct = () => {
             title: "Small Bookself",
             price: 360,
             lessPrice: 20,
-            star: "⭐⭐⭐⭐⭐",
+            star: 4,
             comments: 65,
         },
     ])
 
+//slider state
+const [swiperInstance, setSwiperInstance] = useState(null)
+
     return (
         <>
-            <div className="our-product-container">
-                <div className="our-product-center">
-                    {/* sub nav */}
-                    <Subnavbar titleName={titleName} />
+            <div className="our-product-container container">
 
-                    {/* our products */}
-                    <ProductBox productDetails={productDetails} titleName1="Our Products" newProduct="New product" />
-                    <div className="product-view-button">
-                        <button>View All Products</button>
-                    </div>
+                {/* sub nav */}
+                <Subnavbar titleName={titleName} swiper= {swiperInstance}/>
+
+                {/* our products */}
+                <Swiper
+                    onSwiper={setSwiperInstance}
+                    slidesPerView={4}
+                    centeredSlides={false}
+                    spaceBetween={35}
+                    navigation={false}
+                    modules={[Pagination, Navigation]}
+                    className="product-swiper"
+                >
+                    {productDetails.map((item, index) => (
+                        <SwiperSlide>
+                            <ProductBox  productData= {item} index = {index}  template="3"/>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+                <div className="product-view-button">
+                    <button>View All Products</button>
                 </div>
+
             </div>
         </>
     )
