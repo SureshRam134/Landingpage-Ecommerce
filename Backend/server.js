@@ -48,23 +48,24 @@ server.post("/api/register", async (req, res) => {
 
 })
 
-server.post("/api/user", (req, res) => {
+server.post("/api/user", async(req, res) => {
     try {
         const { email, password, roleId } = req.body;
+        console.log(req.body);
         const sql = "SELECT * FROM user"
-        db.query(sql, async (err, data) => {
+       await db.query(sql, async (err, data) => {
+            console.log(data);
+            
             if (err) return res.status(500).json("error: Internal server error", error)
             if (!data) return res.status(404).json({ message: "data Not Found", })
             const dbData = data.find((item) => item.email === email)
             console.log(dbData, 85);
+            
             if (!dbData) return res.status(401).json({ message: "Email Invaild" })
-
             const currentRole = dbData.roleId
             if (dbData.roleId !== roleId) return res.status(401).json({ message: "check you valid domain", currentRole })
 
 
-            console.log(password, "my pass");
-            console.log(dbData.password, "db pass");
             const hashPassword = await bcrypt.compare(password, dbData.password)
             console.log(hashPassword, "hash pass");
 
