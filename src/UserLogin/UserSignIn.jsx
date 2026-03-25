@@ -5,9 +5,10 @@ import Sign_img from '../assets/sign-img.png'
 
 const UserSignIn = () => {
     const links = {
-         title : "User",
-         role: 1,
-        signLink : "/signup"
+        title: "User",
+        role: 1,
+        signLink: "/signup",
+        homeLink: "/"
     }
     return (
         <>
@@ -16,9 +17,9 @@ const UserSignIn = () => {
 
                 <div className='user-signin'>
                     <div>
-                        <SignIn links={links}/>
+                        <SignIn links={links} />
                     </div>
-                
+
                 </div>
             </div>
         </>

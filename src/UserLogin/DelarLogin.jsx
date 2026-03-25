@@ -8,7 +8,8 @@ const DelarLogin = () => {
     const links = {
          title : "Dealer",
           role:3,
-         signLink : "/delar/signup"
+         signLink : "/delar/signup",
+         homeLink:'/delar/'
     }
     return (
         <>

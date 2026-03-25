@@ -9,7 +9,8 @@ const AdminLogin = () => {
     const links = {
          title : "Admin",
          role:2,
-         signLink : "/admin/signup"
+         signLink : "/admin/signup",
+         homeLink:"/admin/"
     }
     return (
         <>

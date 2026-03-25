@@ -16,29 +16,14 @@ const SignIn = ({ links = {} }) => {
     const autoHomeNavFun = (data) => {
         if (data?.role) {
 
-            if (data?.role === 1) {
-                console.log(data.role, 1);
-                window.location.href = '/'
-
+            if (data?.role === links.role) {
+                window.location.href = links.homeLink
             }
-            else if (data?.role === 2) {
-                console.log(data.role, 2);
-                window.location.href = '/admin/'
-            }
-
-            else if (data?.role === 3) {
-                console.log(data.role, 3);
-                window.location.href = '/delar/'
-            }
-
         }
         else {
             window.location.href = '/login'
         }
     }
-
-
-
 
     let initional = {
         email: '',
@@ -83,20 +68,15 @@ const SignIn = ({ links = {} }) => {
 
             setLogUser(initional)
             setLogError(initional)
-            const currentUser = {
-                role: get_api.data.userDetails.role,
-                email: get_api.data.userDetails.email,
-                name: get_api.data.userDetails.name
-            }
+           
 
-            localStorage.setItem("user", JSON.stringify(currentUser))
+            localStorage.setItem("user", JSON.stringify(get_api.data.userDetails))
             alert("Successfully login")
-            await autoHomeNavFun(currentUser)
+            await autoHomeNavFun(get_api.data.userDetails)
 
         } catch (error) {
             if (error.response?.status === 401) {
                 alert(error.response.data.message);
-
                 const checkUserRole = [1, 2, 3]
                 if (checkUserRole.includes(links.role)) {
                     if (error.response.data.currentRole === 1 && links.role !== 1) return navigate('/login')
