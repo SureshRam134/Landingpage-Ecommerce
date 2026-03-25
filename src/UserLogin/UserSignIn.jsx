@@ -6,7 +6,8 @@ import Sign_img from '../assets/sign-img.png'
 const UserSignIn = () => {
     const links = {
          title : "User",
-         reLocate : "/"
+         role: 1,
+        signLink : "/signup"
     }
     return (
         <>

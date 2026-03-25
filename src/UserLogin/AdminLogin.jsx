@@ -8,7 +8,8 @@ const AdminLogin = () => {
 
     const links = {
          title : "Admin",
-         reLocate : "/admin/"
+         role:2,
+         signLink : "/admin/signup"
     }
     return (
         <>

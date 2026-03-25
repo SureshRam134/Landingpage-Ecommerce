@@ -16,9 +16,9 @@ import Order from './components/Order'
 import Dashboard from './components/Dashboard'
 import DelarDashboard from './components/DelarDashboard'
 import DelarLogin from './UserLogin/DelarLogin'
-// import DelarSignup from './UserLogin/DelarSignup'
+import DelarSignup from './UserLogin/DelarSignup'
 import AdminLogin from './UserLogin/AdminLogin'
-// import AdminSignup from './UserLogin/AdminSignup'
+import AdminSignup from './UserLogin/AdminSignup'
 
 
 
@@ -34,9 +34,13 @@ function App() {
           <Route path='/admin/login' element={<AdminLogin />} />
           <Route path='/delar/login' element={<DelarLogin />} />
 
+
+          <Route path='/signup' element={<UserSignUp />} />
+          <Route path='/admin/signup' element={<AdminSignup/>} />
+          <Route path='/delar/signup' element={< DelarSignup/>} />
+
           <Route element={<User allowedRoles={1} />}>
             <Route index element={<Home />} />
-            <Route path='/signup' element={<UserSignUp />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/about' element={<About />} />
             <Route path='/product/:productid' element={<ProductView />} />

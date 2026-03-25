@@ -3,23 +3,23 @@ import { NavLink } from 'react-router-dom';
 import '../style/SignTemplate.css'
 import { useContext, useState } from 'react';
 import { Context } from '../Context/CreateContext';
+import axios from "axios"
 
 
-const SignUp = ({links= {}}) => {
+
+
+const SignUp = ({ links = {} }) => {
     const { userData, setUserData } = useContext(Context);
-
-
-    const [user, setUser] = useState({
+    const inistional = {
+        roleId: "",
         name: "",
         email: "",
         password: ""
-    })
+    }
 
-    const [error, setError] = useState({
-        name: "",
-        email: "",
-        password: ""
-    })
+    const [user, setUser] = useState(inistional)
+
+    const [error, setError] = useState(inistional)
 
 
 
@@ -34,56 +34,64 @@ const SignUp = ({links= {}}) => {
     }
 
 
-    const userSubmitFun = (e) => {
+    const userSubmitFun = async (e) => {
         e.preventDefault()
-        const { name, email, password = "" } = user;
-        const number = email.match(/\d/g) || ""
-        let newError = {} || "";
 
-        if (!name) { newError.name = "Please Enter Your Name" }
-        if (!email) { newError.email = "Please Enter Your Email or Number" }
+        
+            const { name, email, password = "" } = user;
+            const number = email.match(/\d/g) || ""
+            let newError = {} || "";
+
+            if (!name) { newError.name = "Please Enter Your Name" }
+            if (!email) { newError.email = "Please Enter Your Email or Number" }
 
 
-        if (isNaN(email)) {
-            if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z.-]+\.[a-zA-Z]{2,}$/.test(email)) { newError.email = "Enter Valid Email" }
+            if (isNaN(email)) {
+                if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z.-]+\.[a-zA-Z]{2,}$/.test(email)) { newError.email = "Enter Valid Email" }
+            }
+
+            if (!isNaN(email)) {
+                if (number.length > 10) { newError.email = "mobile max num 10 only" }
+            }
+
+
+            if (!password) newError.password = "Please Create Your Password"
+            // let errorMsg = "";
+            else if (!/(?=.*[a-z])/.test(password)) newError.password = "Must have one small character, ";
+            else if (!/(?=.*[A-Z])/.test(password)) newError.password = "Must have one capital character, ";
+            else if (!/(?=.*[@#$%^&!])/.test(password)) newError.password = "Must have one special character, ";
+            else if (!/(?=.*\d)/.test(password)) newError.password = "Must have one number, ";
+            else if (password.length < 8) newError.password = "Must have min 8 character";
+            // if (errorMsg !== "") { newError.password = errorMsg;}
+
+            console.log(newError);
+
+            if (Object.keys(newError).length > 0) {
+                setError(newError);
+                return;
+            }
+
+            let data = {
+                roleId: links?.role === 1 ? 1 : links?.role === 2 ? 2 : links?.role === 3 ? 3 : "",
+                name: user.name,
+                email: user.email,
+                password: user.password
+            }
+            console.log(data, "data1");
+
+        try {
+            const reg_api = await  axios.post("http://localhost:5000/api/register", data)
+            alert(reg_api.data.message)
+            console.log(reg_api.message)
+
+        } catch (error) {
+            console.log("server error", error.data.message);
         }
 
-        if (!isNaN(email)) {
-            if(number.length > 10) { newError.email = "mobile max num 10 only" }
-        }
-
-
-        if (!password) newError.password = "Please Create Your Password"
-        // let errorMsg = "";
-        else if (!/(?=.*[a-z])/.test(password)) newError.password = "Must have one small character, ";
-        else if (!/(?=.*[A-Z])/.test(password)) newError.password = "Must have one capital character, ";
-        else if (!/(?=.*[@#$%^&!])/.test(password)) newError.password = "Must have one special character, ";
-        else if (!/(?=.*\d)/.test(password)) newError.password = "Must have one number, ";
-        else if (password.length < 8) newError.password = "Must have min 8 character";
-        // if (errorMsg !== "") { newError.password = errorMsg;}
-
-        console.log(newError);
-
-        if (Object.keys(newError).length > 0) {
-            setError(newError);
-            return;
-        }
-
-        setUser({ name: "", email: "", password: "" })
-
-        setError({ name: "", email: "", password: "" })
-        const register = [...userData, user]
-        setUserData(register)
-        localStorage.setItem("registered", JSON.stringify(register))
-        alert("Successfully Registered")
-
-
-
+        setUser(inistional)
+        setError(inistional)
     }
 
-
-    console.log(userData,  87);
-    
 
 
     return (
@@ -138,7 +146,7 @@ const SignUp = ({links= {}}) => {
                         <span style={{ paddingLeft: "16px" }}>Sign up with Google</span>
                     </button>
                 </NavLink>
-                <p className="signup-sub-description">Already have account? <NavLink to={links.logLink}className='signup-log-link-path'>Log in</NavLink></p>
+                <p className="signup-sub-description">Already have account? <NavLink to={links.logLink} className='signup-log-link-path'>Log in</NavLink></p>
             </div>
         </>
     )

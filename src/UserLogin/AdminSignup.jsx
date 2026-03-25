@@ -8,7 +8,8 @@ const AdminSignup = () => {
 
     const links = {
         title : "Admin",
-        logLink : "/admin/adminsign"
+        role :2,
+        logLink : "/admin/login"
 
     }
 

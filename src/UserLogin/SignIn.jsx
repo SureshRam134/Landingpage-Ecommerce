@@ -3,41 +3,41 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import '../style/SignTemplate.css'
 import { Context } from '../Context/CreateContext';
 import { useContext, useState } from 'react';
+import axios from 'axios';
 
 
 const SignIn = ({ links = {} }) => {
 
-    const { userData, setUserData, currentUser, dbUser} = useContext(Context);
-    
-    
-    const navigate = useNavigate()
+    const { userData, setUserData, currentUser, dbUser } = useContext(Context);
 
+
+    const navigate = useNavigate()
 
     const autoHomeNavFun = (data) => {
         if (data?.role) {
 
-            if (data?.role === 1 ){
+            if (data?.role === 1) {
                 console.log(data.role, 1);
-                window.location.href = '/' 
-                
-            } 
+                window.location.href = '/'
+
+            }
             else if (data?.role === 2) {
                 console.log(data.role, 2);
                 window.location.href = '/admin/'
             }
-                
-            else if (data?.role === 3){
+
+            else if (data?.role === 3) {
                 console.log(data.role, 3);
                 window.location.href = '/delar/'
             }
-                
+
         }
         else {
             window.location.href = '/login'
         }
     }
 
-    
+
 
 
     let initional = {
@@ -57,7 +57,7 @@ const SignIn = ({ links = {} }) => {
     }
 
 
-    const userSubmitFun = async(e) => {
+    const userSubmitFun = async (e) => {
         e.preventDefault();
         const { email, password } = logUser
         const logError = {} || ""
@@ -70,31 +70,47 @@ const SignIn = ({ links = {} }) => {
             return;
         }
 
-        const findUser = dbUser.find((item) => item.email === email)
-        // console.log(findUser);
+        try {
 
-        if (!findUser) return alert("Email Invaild")
-        if (findUser.password !== password) return alert("Invaild Password")
+            const users = {
+                roleId: links?.role === 1 ? 1 : links?.role === 2 ? 2 : links?.role === 3 ? 3 : "",
+                email: logUser.email,
+                password: logUser.password
+            }
+            const get_api = await axios.post("http://localhost:5000/api/user", users)
+            alert(get_api.data.message);
 
-        const checkUser = ["User", "Dealar", "Admin"]
-        if(checkUser.includes(links.title)) {
-            if(findUser.id === 1 && links.title !== "User") return navigate( '/login')
-            else if(findUser.id === 2 && links.title !== "Admin") return navigate('/admin/login')
-            else if (findUser.id === 3 && links.title !== "Dealer") return navigate('/Delar/login')
+
+            setLogUser(initional)
+            setLogError(initional)
+            const currentUser = {
+                role: get_api.data.userDetails.role,
+                email: get_api.data.userDetails.email,
+                name: get_api.data.userDetails.name
+            }
+
+            localStorage.setItem("user", JSON.stringify(currentUser))
+            alert("Successfully login")
+            await autoHomeNavFun(currentUser)
+
+        } catch (error) {
+            if (error.response?.status === 401) {
+                alert(error.response.data.message);
+
+                const checkUserRole = [1, 2, 3]
+                if (checkUserRole.includes(links.role)) {
+                    if (error.response.data.currentRole === 1 && links.role !== 1) return navigate('/login')
+                    else if (error.response.data.currentRole === 2 && links.role !== 2) return navigate('/admin/login')
+                    else if (error.response.data.currentRole === 3 && links.role !== 3) return navigate('/Delar/login')
+                }
+
+            } else {
+                console.log("Server error", error);
+            }
+
+
+
         }
-
-
-
-        setLogUser(initional)
-        setLogError(initional)
-        const currentUser = {
-            role: findUser.id,
-            email: findUser.email,
-        }
-        localStorage.setItem("user", JSON.stringify(currentUser))
-        alert("Successfully login")
-        await autoHomeNavFun(currentUser)
-        
     }
 
     const passToggleFun = () => {
@@ -155,7 +171,7 @@ const SignIn = ({ links = {} }) => {
                         <button className='signin-forget-btn'>Forget Password?</button>
                     </div>
                 </form>
-                <p className="signin-sub-description"> Don't have account? <NavLink to="/signup" className='signin-log-link-path'>Sign Up?</NavLink></p>
+                <p className="signin-sub-description"> Don't have account? <NavLink to={links.signLink} className='signin-log-link-path'>Sign Up?</NavLink></p>
             </div>
         </>
     )
