@@ -1,9 +1,8 @@
 import { useContext, useEffect, useState } from "react";
-import { Meta } from "react-router-dom";
-import axios from "axios"
 import '../style/ListEdit.css'
 import EditDatas from "./DataEditComponets/EditDatas";
 import { Context } from "../Context/CreateContext";
+import api from "../Api/AxiosInstances";
 
 
 const UserList = () => {
@@ -21,8 +20,8 @@ const UserList = () => {
 
     const dataGotFunction = async () => {
         try {
-            // const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/getuser/`)
-            const res = await axios.get("http://localhost:5000/api/getuser")
+            // const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/getuser`)
+            const res = await api.get("/api/getuser")
             setData(res.data.dbData);
 
         } catch (error) {

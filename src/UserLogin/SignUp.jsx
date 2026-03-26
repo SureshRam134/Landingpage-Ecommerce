@@ -1,5 +1,5 @@
 import '../style/SignUp.css'
-import { NavLink } from 'react-router-dom';
+import { Navigate, NavLink, useNavigate } from 'react-router-dom';
 import '../style/SignTemplate.css'
 import { useContext, useState } from 'react';
 import { Context } from '../Context/CreateContext';
@@ -9,6 +9,7 @@ import axios from "axios"
 
 
 const SignUp = ({ links = {} }) => {
+    const navigate = useNavigate()
     const { userData, setUserData } = useContext(Context);
     const inistional = {
         roleId: "",
@@ -72,24 +73,23 @@ const SignUp = ({ links = {} }) => {
             }
 
             let data = {
-                roleId: links?.role === 1 ? 1 : links?.role === 2 ? 2 : links?.role === 3 ? 3 : "",
-                name: user.name,
-                email: user.email,
-                password: user.password
+                roleId: links?.role || 0,
+                name: user.name.trim(),
+                email: user.email.trim(),
+                password: user.password.trim()
             }
-            console.log(data, "data1");
 
         try {
             const reg_api = await  axios.post("http://localhost:5000/api/register", data)
             alert(reg_api.data.message)
-            console.log(reg_api.message)
 
         } catch (error) {
-            console.log("server error", error.data.message);
+            console.log("server error", error);
         }
 
         setUser(inistional)
         setError(inistional)
+        navigate(logLink)
     }
 
 
