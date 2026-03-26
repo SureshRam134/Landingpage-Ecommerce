@@ -9,6 +9,10 @@ const listItems = [
             link:"/admin/"
         },
         {
+            linkName:"User List",
+            link:"/admin/user"
+        },
+        {
             linkName:"Orders",
             link:"/admin/orders"
         },

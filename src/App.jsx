@@ -19,6 +19,7 @@ import DelarLogin from './UserLogin/DelarLogin'
 import DelarSignup from './UserLogin/DelarSignup'
 import AdminLogin from './UserLogin/AdminLogin'
 import AdminSignup from './UserLogin/AdminSignup'
+import UserList from './components/UserList'
 
 
 
@@ -50,8 +51,10 @@ function App() {
 
           <Route path='/admin' element={<Admin allowedRoles={2} />}>
             <Route index element={<Dashboard />} />
+            <Route path='user' element={<UserList />} />
             <Route path='orders' element={<Order />} />
             <Route path='cart' element={<Cart />} />
+            <Route path='profile' element={<UserProfile />} />
             <Route path='*' element={<p> Admin 404 Page Not Found</p>}/>
           </Route>
 
@@ -59,6 +62,7 @@ function App() {
             <Route index element={<DelarDashboard />} />
             <Route path='kyc' element={<Kyc />} />
             <Route path='aadhar' element={<Aadhar />} />
+            <Route path='profile' element={<UserProfile />} />
             <Route path='*' element={<p>Delar 404 Page Not Found</p>} />
           </Route>
         </Routes>

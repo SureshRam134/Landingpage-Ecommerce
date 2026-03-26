@@ -1,0 +1,63 @@
+.list-container {
+    padding: 25px;
+    height: 77vh;
+}
+
+.list-content h1 {
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 600;
+    padding: 0px 0px 25px 0px;
+    color: var(--primary-textcolor-pinklight);
+}
+
+.list-table {
+    font-family: sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+    
+
+}
+
+.list-table td, th {
+    /* border: 1px solid #ddd; */
+    padding: 8px;
+    color: var(--primary-textcolor-graylight);
+}
+
+.list-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.list-table tr:hover {
+    background-color: #ddd;
+}
+
+.list-table th {
+    padding: 12px 0px;
+    text-align: left;
+    background-color: var(--primary-textcolor-pinklight);
+    color: white;
+}
+
+.list-table .active {
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: var(--primary--success);
+    cursor: pointer;
+}
+
+.list-table button {
+    background-color: var(--primart-light-bg);
+    outline: none;
+    border: 1px solid var(--primary-sign-btn-bg);
+    padding: 6px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: var(--primary-textcolor-pinklight);
+    font-family: sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}

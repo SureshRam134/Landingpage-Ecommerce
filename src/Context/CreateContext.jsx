@@ -23,14 +23,19 @@ const CreateContext = ({children}) => {
     useEffect (() => {
         userDataFun()
     },[]) 
+
+
+
     
 
     const [userSign, setUserSign] = useState(false)
     const [userData, setUserData] = useState([])
+    const [dataEdit, setDataEdit] = useState({})
+    const [edit, setEdit] = useState(null)
     return(
 
         <>
-            <Context.Provider value={{userSign, setUserSign, userData, setUserData, currentUser}}>
+            <Context.Provider value={{userSign, setUserSign, userData, setUserData, currentUser, dataEdit, setDataEdit, edit, setEdit}}>
                 {children}
             </Context.Provider>
         </>

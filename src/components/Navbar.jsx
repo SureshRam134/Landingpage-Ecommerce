@@ -4,7 +4,6 @@ import { useContext } from "react";
 import { Context } from "../Context/CreateContext";
 
 const Navbar = ({listItems = {}}) => {
-
     
     const {currentUser} = useContext(Context)
 
