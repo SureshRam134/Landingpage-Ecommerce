@@ -1,8 +1,9 @@
 import { NavLink } from 'react-router-dom';
 import '../../style/EditDatas.css'
 import { useContext, useState } from 'react';
-import axios from 'axios'
 import { Context } from '../../Context/CreateContext';
+// import api from '../../Api/AxiosInstances';
+import axios from 'axios';
 
 
 const EditDatas = ({links= {}, updateData = {}}) => {
@@ -28,7 +29,8 @@ const EditDatas = ({links= {}, updateData = {}}) => {
                 setErrorDataEdit(newError)
                 return;
             }
-            const update_res = await axios.put(`http://localhost:5000/api/update`,dataEdit)
+            // const update_res = await api.put("/api/update",dataEdit)
+            const update_res = await axios.put("http://localhost:5000/api/user/update",dataEdit)
             alert(update_res.data.message)
             const newData = update_res.data.newData
             console.log(newData);

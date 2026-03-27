@@ -62,7 +62,7 @@ const SignIn = ({ links = {} }) => {
                 email: logUser.email,
                 password: logUser.password
             }
-            const get_api = await axios.post("http://localhost:5000/api/user", users)
+            const get_api = await axios.post("http://localhost:5000/api/login", users)
             alert(get_api.data.message);
 
 
